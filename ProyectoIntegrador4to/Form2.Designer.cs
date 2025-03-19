@@ -31,7 +31,8 @@
             this.btDirigirReg = new System.Windows.Forms.Button();
             this.btDirigirInv = new System.Windows.Forms.Button();
             this.btRedirigirHis = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbHola = new System.Windows.Forms.Label();
+            this.lbExtra = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btDirigirReg
@@ -64,21 +65,31 @@
             this.btRedirigirHis.UseVisualStyleBackColor = true;
             this.btRedirigirHis.Click += new System.EventHandler(this.btRedirigirHis_Click);
             // 
-            // label1
+            // lbHola
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(193, 296);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "HOLA";
+            this.lbHola.AutoSize = true;
+            this.lbHola.Location = new System.Drawing.Point(193, 296);
+            this.lbHola.Name = "lbHola";
+            this.lbHola.Size = new System.Drawing.Size(36, 13);
+            this.lbHola.TabIndex = 3;
+            this.lbHola.Text = "HOLA";
+            // 
+            // lbExtra
+            // 
+            this.lbExtra.AutoSize = true;
+            this.lbExtra.Location = new System.Drawing.Point(319, 332);
+            this.lbExtra.Name = "lbExtra";
+            this.lbExtra.Size = new System.Drawing.Size(35, 13);
+            this.lbExtra.TabIndex = 4;
+            this.lbExtra.Text = "label1";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 391);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbExtra);
+            this.Controls.Add(this.lbHola);
             this.Controls.Add(this.btRedirigirHis);
             this.Controls.Add(this.btDirigirInv);
             this.Controls.Add(this.btDirigirReg);
@@ -94,6 +105,7 @@
         private System.Windows.Forms.Button btDirigirReg;
         private System.Windows.Forms.Button btDirigirInv;
         private System.Windows.Forms.Button btRedirigirHis;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbHola;
+        private System.Windows.Forms.Label lbExtra;
     }
 }
