@@ -16,5 +16,16 @@ namespace ProyectoIntegrador4to
         {
             InitializeComponent();
         }
+
+        private void btIngresar_Click(object sender, EventArgs e)
+        {
+            String usuario = tbUsuario.Text;
+            String contraseña = tbContraseña.Text;
+            if (usuario.Equals("Usuario1") && contraseña.Equals("12345") )
+            {
+                Form2 form2 = new Form2();
+                form2.Show();
+            }
+        }
     }
 }

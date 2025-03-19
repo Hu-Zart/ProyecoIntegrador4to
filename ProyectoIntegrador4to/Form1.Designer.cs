@@ -75,6 +75,7 @@
             this.btIngresar.TabIndex = 4;
             this.btIngresar.Text = "INGRESAR";
             this.btIngresar.UseVisualStyleBackColor = true;
+            this.btIngresar.Click += new System.EventHandler(this.btIngresar_Click);
             // 
             // Form1
             // 
