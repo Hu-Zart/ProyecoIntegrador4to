@@ -31,6 +31,7 @@
             this.btDirigirReg = new System.Windows.Forms.Button();
             this.btDirigirInv = new System.Windows.Forms.Button();
             this.btRedirigirHis = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btDirigirReg
@@ -63,17 +64,28 @@
             this.btRedirigirHis.UseVisualStyleBackColor = true;
             this.btRedirigirHis.Click += new System.EventHandler(this.btRedirigirHis_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(193, 296);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "HOLA";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 391);
+            this.ClientSize = new System.Drawing.Size(422, 391);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btRedirigirHis);
             this.Controls.Add(this.btDirigirInv);
             this.Controls.Add(this.btDirigirReg);
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -82,5 +94,6 @@
         private System.Windows.Forms.Button btDirigirReg;
         private System.Windows.Forms.Button btDirigirInv;
         private System.Windows.Forms.Button btRedirigirHis;
+        private System.Windows.Forms.Label label1;
     }
 }
