@@ -19,19 +19,19 @@ namespace ProyectoIntegrador4to
 
         private void btDirigirReg_Click(object sender, EventArgs e)
         {
-            Form form3RegistrarConsulta = new Form();
+            Form form3RegistrarConsulta = new Form3RegistrarConsulta();
             form3RegistrarConsulta.Show();
         }
 
         private void btDirigirInv_Click(object sender, EventArgs e)
         {
-            Form form4Inventario = new Form();
+            Form form4Inventario = new Form4Inventario();
             form4Inventario.Show();
         }
 
         private void btRedirigirHis_Click(object sender, EventArgs e)
         {
-            Form form5Historial = new Form();
+            Form form5Historial = new Form5Historial();
             form5Historial.Show();
         }
     }

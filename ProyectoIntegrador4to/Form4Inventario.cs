@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace ProyectoIntegrador4to
         public Form4Inventario()
         {
             InitializeComponent();
+        }
+
+        private void Form4Inventario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btAgregar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

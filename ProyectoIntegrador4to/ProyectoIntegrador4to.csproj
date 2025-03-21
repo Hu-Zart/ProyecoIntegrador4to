@@ -87,6 +87,9 @@
     <EmbeddedResource Include="Form3RegistrarConsulta.resx">
       <DependentUpon>Form3RegistrarConsulta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form4Inventario.resx">
+      <DependentUpon>Form4Inventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
