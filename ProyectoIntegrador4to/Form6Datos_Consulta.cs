@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoIntegrador4to
 {
-    public partial class Form3RegistrarConsulta: Form
+    public partial class Form6Datos_Consulta: Form
     {
-        public Form3RegistrarConsulta()
+        public Form6Datos_Consulta()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form form6Datos_Consulta = new Form6Datos_Consulta();
-            form6Datos_Consulta.Show();
         }
     }
 }
