@@ -15,12 +15,21 @@ namespace ProyectoIntegrador4to
         public Form3RegistrarConsulta()
         {
             InitializeComponent();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form form6Datos_Consulta = new Form6Datos_Consulta();
-            form6Datos_Consulta.Show();
+            Form6Datos_Consulta form6Datos_Consulta = new Form6Datos_Consulta();
+
+            // Accede al formulario padre (Form2) y utiliza el método para mostrar el formulario en panel2
+            if (this.Owner is Form2 frmPadre)
+            {
+                frmPadre.mOSTRARfORMULARIOeNpANEL(form6Datos_Consulta);
+            }
+            // Opcional: Si deseas cerrar o esconder el formulario actual:
+            this.Close();
         }
+
     }
 }
