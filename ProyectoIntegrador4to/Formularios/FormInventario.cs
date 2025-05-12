@@ -22,6 +22,15 @@ namespace ProyectoIntegrador4to.Formularios
             mostrarFormulario(new Form4Inventario());
         }
 
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mostrarFormulario(new FormCategorias());
+        }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mostrarFormulario(new FormProveedores());
+        }
         public void mostrarFormulario(Form formulario)
         {
 
@@ -34,5 +43,7 @@ namespace ProyectoIntegrador4to.Formularios
             panel1.Controls.Add(formulario);
             formulario.Show();
         }
+
+        
     }
 }

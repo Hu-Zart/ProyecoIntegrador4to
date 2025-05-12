@@ -16,6 +16,17 @@ namespace ProyectoIntegrador4to
         public Form4Inventario()
         {
             InitializeComponent();
+            Controladores.ControladorProductos controladorProveedore = new Controladores.ControladorProductos();
+            Controladores.ControladorProductos controladorCategoria = new Controladores.ControladorProductos();
+
+            //controladorProveedor.consultarProveedores(cbProveedores);
+            cargarDatos();
+        }
+
+        public void cargarDatos()
+        {
+            Controladores.ControladorProductos objetoControlador = new Controladores.ControladorProductos();
+            objetoControlador.consultarProductos(dgProductos);
         }
 
         private void Form4Inventario_Load(object sender, EventArgs e)

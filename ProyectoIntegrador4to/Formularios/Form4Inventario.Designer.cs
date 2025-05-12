@@ -34,34 +34,35 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.lbNombrePantalla = new System.Windows.Forms.Label();
-            this.dgwProductos = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Informacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgProductos = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numCantidad = new System.Windows.Forms.NumericUpDown();
-            this.numPrecio = new System.Windows.Forms.NumericUpDown();
             this.btEliminar = new System.Windows.Forms.Button();
             this.btEditar = new System.Windows.Forms.Button();
             this.btAgregar = new System.Windows.Forms.Button();
-            this.tbInformacion = new System.Windows.Forms.TextBox();
-            this.lblInformacion = new System.Windows.Forms.Label();
-            this.cbCategoria = new System.Windows.Forms.ComboBox();
-            this.lblCantidad = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
-            this.lblCategoria = new System.Windows.Forms.Label();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.tbCodigo = new System.Windows.Forms.TextBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.numPrecio = new System.Windows.Forms.NumericUpDown();
+            this.numCosto = new System.Windows.Forms.NumericUpDown();
+            this.lbCosto = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.lblExistencia = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblMedida = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblCaducidad = new System.Windows.Forms.Label();
+            this.cbProveedores = new System.Windows.Forms.ComboBox();
+            this.lblProveedor = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.cbCategorias = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCosto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -74,10 +75,10 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.lblFiltrar);
             this.groupBox1.Controls.Add(this.lbNombrePantalla);
-            this.groupBox1.Controls.Add(this.dgwProductos);
+            this.groupBox1.Controls.Add(this.dgProductos);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1037, 430);
+            this.groupBox1.Size = new System.Drawing.Size(1411, 430);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -131,100 +132,49 @@
             this.lbNombrePantalla.TabIndex = 1;
             this.lbNombrePantalla.Text = "PRODUCTOS";
             // 
-            // dgwProductos
+            // dgProductos
             // 
-            this.dgwProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgwProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgwProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Nombre,
-            this.Categoria,
-            this.Precio,
-            this.Cantidad,
-            this.Informacion});
-            this.dgwProductos.Location = new System.Drawing.Point(6, 44);
-            this.dgwProductos.Name = "dgwProductos";
-            this.dgwProductos.Size = new System.Drawing.Size(1025, 380);
-            this.dgwProductos.TabIndex = 0;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "CODIGO";
-            this.Codigo.Name = "Codigo";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "NOMBRE";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "CATEGORIA";
-            this.Categoria.Name = "Categoria";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "PRECIO";
-            this.Precio.Name = "Precio";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "CANTIDAD";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Informacion
-            // 
-            this.Informacion.HeaderText = "INFORMACIÓN";
-            this.Informacion.Name = "Informacion";
+            this.dgProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgProductos.Location = new System.Drawing.Point(6, 44);
+            this.dgProductos.Name = "dgProductos";
+            this.dgProductos.Size = new System.Drawing.Size(1399, 380);
+            this.dgProductos.TabIndex = 0;
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.numCantidad);
+            this.groupBox2.Controls.Add(this.lblCategoria);
+            this.groupBox2.Controls.Add(this.cbCategorias);
+            this.groupBox2.Controls.Add(this.lblProveedor);
+            this.groupBox2.Controls.Add(this.cbProveedores);
+            this.groupBox2.Controls.Add(this.lblCaducidad);
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.lblMedida);
+            this.groupBox2.Controls.Add(this.numericUpDown1);
+            this.groupBox2.Controls.Add(this.lblExistencia);
+            this.groupBox2.Controls.Add(this.numCosto);
+            this.groupBox2.Controls.Add(this.lbCosto);
             this.groupBox2.Controls.Add(this.numPrecio);
             this.groupBox2.Controls.Add(this.btEliminar);
             this.groupBox2.Controls.Add(this.btEditar);
             this.groupBox2.Controls.Add(this.btAgregar);
-            this.groupBox2.Controls.Add(this.tbInformacion);
-            this.groupBox2.Controls.Add(this.lblInformacion);
-            this.groupBox2.Controls.Add(this.cbCategoria);
-            this.groupBox2.Controls.Add(this.lblCantidad);
             this.groupBox2.Controls.Add(this.lblPrecio);
-            this.groupBox2.Controls.Add(this.lblCategoria);
             this.groupBox2.Controls.Add(this.tbNombre);
             this.groupBox2.Controls.Add(this.lblNombre);
             this.groupBox2.Controls.Add(this.tbCodigo);
-            this.groupBox2.Controls.Add(this.lblCodigo);
+            this.groupBox2.Controls.Add(this.lblDescripcion);
             this.groupBox2.Location = new System.Drawing.Point(12, 450);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1037, 201);
+            this.groupBox2.Size = new System.Drawing.Size(1411, 201);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            // 
-            // numCantidad
-            // 
-            this.numCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.numCantidad.Location = new System.Drawing.Point(567, 117);
-            this.numCantidad.Name = "numCantidad";
-            this.numCantidad.Size = new System.Drawing.Size(171, 27);
-            this.numCantidad.TabIndex = 17;
-            // 
-            // numPrecio
-            // 
-            this.numPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.numPrecio.Location = new System.Drawing.Point(567, 84);
-            this.numPrecio.Name = "numPrecio";
-            this.numPrecio.Size = new System.Drawing.Size(171, 27);
-            this.numPrecio.TabIndex = 16;
             // 
             // btEliminar
             // 
@@ -234,7 +184,7 @@
             this.btEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btEliminar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btEliminar.Location = new System.Drawing.Point(874, 122);
+            this.btEliminar.Location = new System.Drawing.Point(1216, 122);
             this.btEliminar.Name = "btEliminar";
             this.btEliminar.Size = new System.Drawing.Size(116, 35);
             this.btEliminar.TabIndex = 15;
@@ -248,7 +198,7 @@
             this.btEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btEditar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btEditar.Location = new System.Drawing.Point(874, 81);
+            this.btEditar.Location = new System.Drawing.Point(1216, 81);
             this.btEditar.Name = "btEditar";
             this.btEditar.Size = new System.Drawing.Size(116, 35);
             this.btEditar.TabIndex = 14;
@@ -262,7 +212,7 @@
             this.btAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btAgregar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btAgregar.Location = new System.Drawing.Point(874, 40);
+            this.btAgregar.Location = new System.Drawing.Point(1216, 40);
             this.btAgregar.Name = "btAgregar";
             this.btAgregar.Size = new System.Drawing.Size(116, 35);
             this.btAgregar.TabIndex = 13;
@@ -270,83 +220,23 @@
             this.btAgregar.UseVisualStyleBackColor = false;
             this.btAgregar.Click += new System.EventHandler(this.btAgregar_Click);
             // 
-            // tbInformacion
-            // 
-            this.tbInformacion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.tbInformacion.Location = new System.Drawing.Point(567, 48);
-            this.tbInformacion.Name = "tbInformacion";
-            this.tbInformacion.Size = new System.Drawing.Size(171, 27);
-            this.tbInformacion.TabIndex = 12;
-            // 
-            // lblInformacion
-            // 
-            this.lblInformacion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblInformacion.AutoSize = true;
-            this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblInformacion.Location = new System.Drawing.Point(422, 53);
-            this.lblInformacion.Name = "lblInformacion";
-            this.lblInformacion.Size = new System.Drawing.Size(135, 22);
-            this.lblInformacion.TabIndex = 11;
-            this.lblInformacion.Text = "INFORMACIÓN";
-            // 
-            // cbCategoria
-            // 
-            this.cbCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Items.AddRange(new object[] {
-            "Alimentos",
-            "Medicamentos",
-            "Suplementos",
-            "Accesorios",
-            "Higiene/Cuidado",
-            "Equipos/Suministros"});
-            this.cbCategoria.Location = new System.Drawing.Point(140, 119);
-            this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(176, 26);
-            this.cbCategoria.TabIndex = 10;
-            // 
-            // lblCantidad
-            // 
-            this.lblCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblCantidad.Location = new System.Drawing.Point(455, 119);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(102, 22);
-            this.lblCantidad.TabIndex = 8;
-            this.lblCantidad.Text = "CANTIDAD";
-            // 
             // lblPrecio
             // 
             this.lblPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblPrecio.Location = new System.Drawing.Point(479, 86);
+            this.lblPrecio.Location = new System.Drawing.Point(83, 113);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(78, 22);
-            this.lblPrecio.TabIndex = 6;
+            this.lblPrecio.TabIndex = 4;
             this.lblPrecio.Text = "PRECIO";
-            // 
-            // lblCategoria
-            // 
-            this.lblCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblCategoria.Location = new System.Drawing.Point(18, 119);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(116, 22);
-            this.lblCategoria.TabIndex = 4;
-            this.lblCategoria.Text = "CATEGORIA";
             // 
             // tbNombre
             // 
             this.tbNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.tbNombre.Location = new System.Drawing.Point(140, 81);
+            this.tbNombre.Location = new System.Drawing.Point(166, 46);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(176, 27);
             this.tbNombre.TabIndex = 3;
@@ -356,7 +246,7 @@
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblNombre.Location = new System.Drawing.Point(46, 86);
+            this.lblNombre.Location = new System.Drawing.Point(72, 48);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(88, 22);
             this.lblNombre.TabIndex = 2;
@@ -367,27 +257,166 @@
             this.tbCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.tbCodigo.Location = new System.Drawing.Point(140, 50);
+            this.tbCodigo.Location = new System.Drawing.Point(166, 79);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(176, 27);
             this.tbCodigo.TabIndex = 1;
             // 
-            // lblCodigo
+            // lblDescripcion
             // 
-            this.lblCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblCodigo.Location = new System.Drawing.Point(52, 53);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(82, 22);
-            this.lblCodigo.TabIndex = 0;
-            this.lblCodigo.Text = "CODIGO";
+            this.lblDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblDescripcion.Location = new System.Drawing.Point(27, 81);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(133, 22);
+            this.lblDescripcion.TabIndex = 0;
+            this.lblDescripcion.Text = "DESCRIPCIÓN";
+            // 
+            // numPrecio
+            // 
+            this.numPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numPrecio.DecimalPlaces = 2;
+            this.numPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.numPrecio.Location = new System.Drawing.Point(166, 111);
+            this.numPrecio.Margin = new System.Windows.Forms.Padding(2);
+            this.numPrecio.Name = "numPrecio";
+            this.numPrecio.Size = new System.Drawing.Size(176, 27);
+            this.numPrecio.TabIndex = 69;
+            // 
+            // numCosto
+            // 
+            this.numCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numCosto.DecimalPlaces = 2;
+            this.numCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.numCosto.Location = new System.Drawing.Point(492, 45);
+            this.numCosto.Margin = new System.Windows.Forms.Padding(2);
+            this.numCosto.Name = "numCosto";
+            this.numCosto.Size = new System.Drawing.Size(176, 27);
+            this.numCosto.TabIndex = 71;
+            // 
+            // lbCosto
+            // 
+            this.lbCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbCosto.AutoSize = true;
+            this.lbCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lbCosto.Location = new System.Drawing.Point(409, 47);
+            this.lbCosto.Name = "lbCosto";
+            this.lbCosto.Size = new System.Drawing.Size(75, 22);
+            this.lbCosto.TabIndex = 70;
+            this.lbCosto.Text = "COSTO";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown1.DecimalPlaces = 2;
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.numericUpDown1.Location = new System.Drawing.Point(492, 76);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(176, 27);
+            this.numericUpDown1.TabIndex = 73;
+            // 
+            // lblExistencia
+            // 
+            this.lblExistencia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblExistencia.AutoSize = true;
+            this.lblExistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblExistencia.Location = new System.Drawing.Point(371, 78);
+            this.lblExistencia.Name = "lblExistencia";
+            this.lblExistencia.Size = new System.Drawing.Size(116, 22);
+            this.lblExistencia.TabIndex = 72;
+            this.lblExistencia.Text = "EXISTENCIA";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.textBox2.Location = new System.Drawing.Point(492, 108);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ShortcutsEnabled = false;
+            this.textBox2.Size = new System.Drawing.Size(176, 27);
+            this.textBox2.TabIndex = 75;
+            // 
+            // lblMedida
+            // 
+            this.lblMedida.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMedida.AutoSize = true;
+            this.lblMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblMedida.Location = new System.Drawing.Point(408, 110);
+            this.lblMedida.Name = "lblMedida";
+            this.lblMedida.Size = new System.Drawing.Size(78, 22);
+            this.lblMedida.TabIndex = 74;
+            this.lblMedida.Text = "MEDIDA";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(876, 46);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(212, 27);
+            this.dateTimePicker1.TabIndex = 76;
+            // 
+            // lblCaducidad
+            // 
+            this.lblCaducidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCaducidad.AutoSize = true;
+            this.lblCaducidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblCaducidad.Location = new System.Drawing.Point(754, 48);
+            this.lblCaducidad.Name = "lblCaducidad";
+            this.lblCaducidad.Size = new System.Drawing.Size(116, 22);
+            this.lblCaducidad.TabIndex = 77;
+            this.lblCaducidad.Text = "CADUCIDAD";
+            // 
+            // cbProveedores
+            // 
+            this.cbProveedores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cbProveedores.FormattingEnabled = true;
+            this.cbProveedores.Location = new System.Drawing.Point(876, 78);
+            this.cbProveedores.Name = "cbProveedores";
+            this.cbProveedores.Size = new System.Drawing.Size(212, 28);
+            this.cbProveedores.TabIndex = 78;
+            // 
+            // lblProveedor
+            // 
+            this.lblProveedor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblProveedor.Location = new System.Drawing.Point(745, 81);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(125, 22);
+            this.lblProveedor.TabIndex = 79;
+            this.lblProveedor.Text = "PROVEEDOR";
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblCategoria.Location = new System.Drawing.Point(745, 113);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(116, 22);
+            this.lblCategoria.TabIndex = 81;
+            this.lblCategoria.Text = "CATEGORIA";
+            // 
+            // cbCategorias
+            // 
+            this.cbCategorias.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cbCategorias.FormattingEnabled = true;
+            this.cbCategorias.Location = new System.Drawing.Point(876, 110);
+            this.cbCategorias.Name = "cbCategorias";
+            this.cbCategorias.Size = new System.Drawing.Size(212, 28);
+            this.cbCategorias.TabIndex = 80;
             // 
             // Form4Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1061, 663);
+            this.ClientSize = new System.Drawing.Size(1435, 663);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form4Inventario";
@@ -396,11 +425,12 @@
             this.Load += new System.EventHandler(this.Form4Inventario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCosto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -409,32 +439,32 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbNombrePantalla;
-        private System.Windows.Forms.DataGridView dgwProductos;
+        private System.Windows.Forms.DataGridView dgProductos;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox tbCodigo;
-        private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.TextBox tbInformacion;
-        private System.Windows.Forms.Label lblInformacion;
-        private System.Windows.Forms.ComboBox cbCategoria;
         private System.Windows.Forms.Button btAgregar;
         private System.Windows.Forms.Button btEliminar;
         private System.Windows.Forms.Button btEditar;
-        private System.Windows.Forms.NumericUpDown numCantidad;
-        private System.Windows.Forms.NumericUpDown numPrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Informacion;
         private System.Windows.Forms.Label lblFiltrar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.NumericUpDown numCosto;
+        private System.Windows.Forms.Label lbCosto;
+        public System.Windows.Forms.NumericUpDown numPrecio;
+        private System.Windows.Forms.ComboBox cbProveedores;
+        private System.Windows.Forms.Label lblCaducidad;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblMedida;
+        public System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label lblExistencia;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.ComboBox cbCategorias;
+        private System.Windows.Forms.Label lblProveedor;
     }
 }
