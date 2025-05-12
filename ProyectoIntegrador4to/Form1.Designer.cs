@@ -65,7 +65,7 @@
             // lbContraseña
             // 
             this.lbContraseña.AutoSize = true;
-            this.lbContraseña.Location = new System.Drawing.Point(97, 89);
+            this.lbContraseña.Location = new System.Drawing.Point(34, 89);
             this.lbContraseña.Name = "lbContraseña";
             this.lbContraseña.Size = new System.Drawing.Size(61, 13);
             this.lbContraseña.TabIndex = 2;
