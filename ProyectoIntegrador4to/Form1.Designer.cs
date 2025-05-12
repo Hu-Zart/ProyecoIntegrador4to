@@ -38,7 +38,7 @@
             // lbUsuario
             // 
             this.lbUsuario.AutoSize = true;
-            this.lbUsuario.Location = new System.Drawing.Point(97, 35);
+            this.lbUsuario.Location = new System.Drawing.Point(34, 9);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(43, 13);
             this.lbUsuario.TabIndex = 0;
@@ -46,17 +46,21 @@
             // 
             // tbUsuario
             // 
-            this.tbUsuario.Location = new System.Drawing.Point(100, 51);
+            this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.tbUsuario.Location = new System.Drawing.Point(12, 25);
             this.tbUsuario.Name = "tbUsuario";
-            this.tbUsuario.Size = new System.Drawing.Size(106, 20);
+            this.tbUsuario.Size = new System.Drawing.Size(287, 31);
             this.tbUsuario.TabIndex = 1;
+            this.tbUsuario.Text = "USUARIO";
             // 
             // tbContraseña
             // 
-            this.tbContraseña.Location = new System.Drawing.Point(100, 105);
+            this.tbContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
+            this.tbContraseña.Location = new System.Drawing.Point(12, 105);
             this.tbContraseña.Name = "tbContraseña";
-            this.tbContraseña.Size = new System.Drawing.Size(106, 20);
+            this.tbContraseña.Size = new System.Drawing.Size(287, 27);
             this.tbContraseña.TabIndex = 3;
+            this.tbContraseña.Text = "CONTRASEÑA";
             // 
             // lbContraseña
             // 

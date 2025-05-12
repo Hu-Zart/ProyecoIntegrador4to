@@ -58,32 +58,38 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3RegistrarConsulta.cs">
+    <Compile Include="Formularios\Form3RegistrarConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3RegistrarConsulta.Designer.cs">
+    <Compile Include="Formularios\Form3RegistrarConsulta.Designer.cs">
       <DependentUpon>Form3RegistrarConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4Inventario.cs">
+    <Compile Include="Formularios\Form4Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4Inventario.Designer.cs">
+    <Compile Include="Formularios\Form4Inventario.Designer.cs">
       <DependentUpon>Form4Inventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5Historial.cs">
+    <Compile Include="Formularios\Form5Historial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5Historial.Designer.cs">
+    <Compile Include="Formularios\Form5Historial.Designer.cs">
       <DependentUpon>Form5Historial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6Datos_Consulta.cs">
+    <Compile Include="Formularios\Form6Datos_Consulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6Datos_Consulta.Designer.cs">
+    <Compile Include="Formularios\Form6Datos_Consulta.Designer.cs">
       <DependentUpon>Form6Datos_Consulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBaseHijo.cs">
+    <Compile Include="Formularios\FormBaseHijo.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormInventario.Designer.cs">
+      <DependentUpon>FormInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,17 +99,20 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3RegistrarConsulta.resx">
+    <EmbeddedResource Include="Formularios\Form3RegistrarConsulta.resx">
       <DependentUpon>Form3RegistrarConsulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4Inventario.resx">
+    <EmbeddedResource Include="Formularios\Form4Inventario.resx">
       <DependentUpon>Form4Inventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5Historial.resx">
+    <EmbeddedResource Include="Formularios\Form5Historial.resx">
       <DependentUpon>Form5Historial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6Datos_Consulta.resx">
+    <EmbeddedResource Include="Formularios\Form6Datos_Consulta.resx">
       <DependentUpon>Form6Datos_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormInventario.resx">
+      <DependentUpon>FormInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -126,6 +135,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Conexion\" />
+    <Folder Include="Controladores\" />
+    <Folder Include="Modelos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

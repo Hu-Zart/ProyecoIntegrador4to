@@ -66,6 +66,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.lblBuscar);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -130,6 +133,9 @@
             // 
             // dgwProductos
             // 
+            this.dgwProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgwProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -176,6 +182,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.numCantidad);
             this.groupBox2.Controls.Add(this.numPrecio);
             this.groupBox2.Controls.Add(this.btEliminar);
@@ -199,6 +208,7 @@
             // 
             // numCantidad
             // 
+            this.numCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.numCantidad.Location = new System.Drawing.Point(567, 117);
@@ -208,6 +218,7 @@
             // 
             // numPrecio
             // 
+            this.numPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.numPrecio.Location = new System.Drawing.Point(567, 84);
@@ -217,6 +228,7 @@
             // 
             // btEliminar
             // 
+            this.btEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btEliminar.BackColor = System.Drawing.Color.SteelBlue;
             this.btEliminar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -231,6 +243,7 @@
             // 
             // btEditar
             // 
+            this.btEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btEditar.BackColor = System.Drawing.Color.SteelBlue;
             this.btEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -244,6 +257,7 @@
             // 
             // btAgregar
             // 
+            this.btAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btAgregar.BackColor = System.Drawing.Color.SteelBlue;
             this.btAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -258,6 +272,7 @@
             // 
             // tbInformacion
             // 
+            this.tbInformacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.tbInformacion.Location = new System.Drawing.Point(567, 48);
@@ -267,6 +282,7 @@
             // 
             // lblInformacion
             // 
+            this.lblInformacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblInformacion.AutoSize = true;
             this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.lblInformacion.Location = new System.Drawing.Point(422, 53);
@@ -277,6 +293,7 @@
             // 
             // cbCategoria
             // 
+            this.cbCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Items.AddRange(new object[] {
@@ -293,6 +310,7 @@
             // 
             // lblCantidad
             // 
+            this.lblCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.lblCantidad.Location = new System.Drawing.Point(455, 119);
@@ -303,6 +321,7 @@
             // 
             // lblPrecio
             // 
+            this.lblPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.lblPrecio.Location = new System.Drawing.Point(479, 86);
@@ -313,6 +332,7 @@
             // 
             // lblCategoria
             // 
+            this.lblCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.lblCategoria.Location = new System.Drawing.Point(18, 119);
@@ -323,6 +343,7 @@
             // 
             // tbNombre
             // 
+            this.tbNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.tbNombre.Location = new System.Drawing.Point(140, 81);
@@ -332,6 +353,7 @@
             // 
             // lblNombre
             // 
+            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.lblNombre.Location = new System.Drawing.Point(46, 86);
@@ -342,6 +364,7 @@
             // 
             // tbCodigo
             // 
+            this.tbCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.tbCodigo.Location = new System.Drawing.Point(140, 50);
@@ -351,6 +374,7 @@
             // 
             // lblCodigo
             // 
+            this.lblCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.lblCodigo.Location = new System.Drawing.Point(52, 53);
@@ -368,6 +392,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form4Inventario";
             this.Text = "Form4Inventario";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form4Inventario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
