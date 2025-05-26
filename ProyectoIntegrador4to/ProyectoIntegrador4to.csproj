@@ -100,6 +100,7 @@
   <ItemGroup>
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="Controladores\ControladorCategorias.cs" />
+    <Compile Include="Controladores\ControladorPacientes.cs" />
     <Compile Include="Controladores\ControladorProductos.cs" />
     <Compile Include="Controladores\ControladorProveedoes.cs" />
     <Compile Include="Controladores\ControladorTutores.cs" />
@@ -169,7 +170,14 @@
     <Compile Include="Formularios\FormTutores.Designer.cs">
       <DependentUpon>FormTutores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FormPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormPacientes.Designer.cs">
+      <DependentUpon>FormPacientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\ModeloCategorias.cs" />
+    <Compile Include="Modelos\ModeloPacientes.cs" />
     <Compile Include="Modelos\ModeloProductos.cs" />
     <Compile Include="Modelos\ModeloProveedores.cs" />
     <Compile Include="Modelos\ModeloTutores.cs" />
@@ -207,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormTutores.resx">
       <DependentUpon>FormTutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormPacientes.resx">
+      <DependentUpon>FormPacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

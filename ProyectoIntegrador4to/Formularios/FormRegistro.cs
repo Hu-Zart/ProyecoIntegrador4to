@@ -34,5 +34,10 @@ namespace ProyectoIntegrador4to.Formularios
             panel1.Controls.Add(formulario);
             formulario.Show();
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mostrarFormulario(new FormPacientes());
+        }
     }
 }
