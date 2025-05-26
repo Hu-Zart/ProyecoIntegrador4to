@@ -10,27 +10,18 @@ using System.Windows.Forms;
 
 namespace ProyectoIntegrador4to.Formularios
 {
-    public partial class FormInventario: Form
+    public partial class FormRegistro: Form
     {
-        public FormInventario()
+        public FormRegistro()
         {
             InitializeComponent();
         }
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mostrarFormulario(new FormProductos());
+            mostrarFormulario(new FormTutores());
         }
 
-        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            mostrarFormulario(new FormCategorias());
-        }
-
-        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            mostrarFormulario(new FormProveedores());
-        }
         public void mostrarFormulario(Form formulario)
         {
 
@@ -43,7 +34,5 @@ namespace ProyectoIntegrador4to.Formularios
             panel1.Controls.Add(formulario);
             formulario.Show();
         }
-
-        
     }
 }

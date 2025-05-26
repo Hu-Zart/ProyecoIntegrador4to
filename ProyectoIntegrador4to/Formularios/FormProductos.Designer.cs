@@ -1,6 +1,6 @@
 ﻿namespace ProyectoIntegrador4to
 {
-    partial class Form4Inventario
+    partial class FormProductos
     {
         /// <summary>
         /// Required designer variable.
@@ -322,6 +322,11 @@
             this.numPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.numPrecio.Location = new System.Drawing.Point(166, 111);
             this.numPrecio.Margin = new System.Windows.Forms.Padding(2);
+            this.numPrecio.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numPrecio.Name = "numPrecio";
             this.numPrecio.Size = new System.Drawing.Size(176, 27);
             this.numPrecio.TabIndex = 69;

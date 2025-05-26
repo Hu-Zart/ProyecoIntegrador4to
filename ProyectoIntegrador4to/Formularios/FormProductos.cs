@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ProyectoIntegrador4to
 {
-    public partial class Form4Inventario: Form
+    public partial class FormProductos: Form
     {
-        public Form4Inventario()
+        public FormProductos()
         {
             InitializeComponent();
             Controladores.ControladorProductos controladorProveedore = new Controladores.ControladorProductos();

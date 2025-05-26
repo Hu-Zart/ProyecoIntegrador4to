@@ -29,7 +29,7 @@ namespace ProyectoIntegrador4to.Controladores
             dtProductos.Columns.Add("Proveedor", typeof(string));
             dtProductos.Columns.Add("Categoria", typeof(string));
 
-            string sql = @"SELECT p.id_producto, p.nombre, p.descripcion, p.precio, p.costo, p.existencia, p.unidad_medida, p.fecha_caducidad, pr.nombre, c.nombre
+            string sql = @"SELECT p.id_producto, p.nombre, p.descripcion, p.precio, p.costo, p.existencia, p.unidad_medida, p.fecha_caducidad, pr.nombre AS nombre_proveedor, c.nombre AS nombre_categoria
                          FROM productos p 
                          INNER JOIN proveedores pr ON p.id_proveedor = pr.id_proveedor 
                          INNER JOIN categorias c ON p.id_categoria = c.id_categoria";
@@ -55,8 +55,8 @@ namespace ProyectoIntegrador4to.Controladores
                     objetoProductos.Existencia = Convert.ToInt32(row["existencia"]);
                     objetoProductos.Unidad_medida = row["unidad_medida"] != DBNull.Value ? row["unidad_medida"].ToString() : "";
                     objetoProductos.Fecha_caducidad = row["fecha_caducidad"] != DBNull.Value ? Convert.ToDateTime(row["fecha_caducidad"]) : DateTime.MinValue;
-                    objetoProductos.Proveedor = row["nombre"].ToString();
-                    objetoProductos.Categoria = row["nombre"].ToString();
+                    objetoProductos.Proveedor = row["nombre_proveedor"].ToString();
+                    objetoProductos.Categoria = row["nombre_categoria"].ToString();
                     dtProductos.Rows.Add(objetoProductos.IdProducto, objetoProductos.Nombre, objetoProductos.Descripcion,
                         objetoProductos.Precio, objetoProductos.Costo, objetoProductos.Existencia,
                         objetoProductos.Unidad_medida, objetoProductos.Fecha_caducidad, objetoProductos.Proveedor,

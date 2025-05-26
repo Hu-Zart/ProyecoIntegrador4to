@@ -102,6 +102,7 @@
     <Compile Include="Controladores\ControladorCategorias.cs" />
     <Compile Include="Controladores\ControladorProductos.cs" />
     <Compile Include="Controladores\ControladorProveedoes.cs" />
+    <Compile Include="Controladores\ControladorTutores.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,11 +121,11 @@
     <Compile Include="Formularios\Form3RegistrarConsulta.Designer.cs">
       <DependentUpon>Form3RegistrarConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Form4Inventario.cs">
+    <Compile Include="Formularios\FormProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Form4Inventario.Designer.cs">
-      <DependentUpon>Form4Inventario.cs</DependentUpon>
+    <Compile Include="Formularios\FormProductos.Designer.cs">
+      <DependentUpon>FormProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Form5Historial.cs">
       <SubType>Form</SubType>
@@ -156,9 +157,22 @@
     <Compile Include="Formularios\FormProveedores.Designer.cs">
       <DependentUpon>FormProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FormRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormRegistro.Designer.cs">
+      <DependentUpon>FormRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormTutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormTutores.Designer.cs">
+      <DependentUpon>FormTutores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\ModeloCategorias.cs" />
     <Compile Include="Modelos\ModeloProductos.cs" />
     <Compile Include="Modelos\ModeloProveedores.cs" />
+    <Compile Include="Modelos\ModeloTutores.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -170,8 +184,8 @@
     <EmbeddedResource Include="Formularios\Form3RegistrarConsulta.resx">
       <DependentUpon>Form3RegistrarConsulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Form4Inventario.resx">
-      <DependentUpon>Form4Inventario.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FormProductos.resx">
+      <DependentUpon>FormProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Form5Historial.resx">
       <DependentUpon>Form5Historial.cs</DependentUpon>
@@ -187,6 +201,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormProveedores.resx">
       <DependentUpon>FormProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormRegistro.resx">
+      <DependentUpon>FormRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormTutores.resx">
+      <DependentUpon>FormTutores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

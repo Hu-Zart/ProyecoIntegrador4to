@@ -21,9 +21,8 @@ namespace ProyectoIntegrador4to
 
         private void btDirigirReg_Click(object sender, EventArgs e)
         {
-            Form form3RegistrarConsulta = new Form3RegistrarConsulta();
-            form3RegistrarConsulta.Owner = this;
-            mOSTRARfORMULARIOeNpANEL(form3RegistrarConsulta);
+            Form formRegistro = new FormRegistro();
+            mOSTRARfORMULARIOeNpANEL(formRegistro);
         }
 
         private void btDirigirInv_Click(object sender, EventArgs e)
