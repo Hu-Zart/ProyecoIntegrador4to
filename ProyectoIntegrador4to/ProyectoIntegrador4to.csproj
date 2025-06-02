@@ -100,10 +100,12 @@
   <ItemGroup>
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="Controladores\ControladorCategorias.cs" />
+    <Compile Include="Controladores\ControladorConsultas.cs" />
     <Compile Include="Controladores\ControladorPacientes.cs" />
     <Compile Include="Controladores\ControladorProductos.cs" />
     <Compile Include="Controladores\ControladorProveedoes.cs" />
     <Compile Include="Controladores\ControladorTutores.cs" />
+    <Compile Include="Controladores\ControladorUsuarios.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +123,12 @@
     </Compile>
     <Compile Include="Formularios\Form3RegistrarConsulta.Designer.cs">
       <DependentUpon>Form3RegistrarConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormConsultas.Designer.cs">
+      <DependentUpon>FormConsultas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FormProductos.cs">
       <SubType>Form</SubType>
@@ -176,11 +184,19 @@
     <Compile Include="Formularios\FormPacientes.Designer.cs">
       <DependentUpon>FormPacientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FormUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormUsuarios.Designer.cs">
+      <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\ModeloCategorias.cs" />
+    <Compile Include="Modelos\ModeloConsultas.cs" />
     <Compile Include="Modelos\ModeloPacientes.cs" />
     <Compile Include="Modelos\ModeloProductos.cs" />
     <Compile Include="Modelos\ModeloProveedores.cs" />
     <Compile Include="Modelos\ModeloTutores.cs" />
+    <Compile Include="Modelos\ModeloUsuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -191,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Form3RegistrarConsulta.resx">
       <DependentUpon>Form3RegistrarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormConsultas.resx">
+      <DependentUpon>FormConsultas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
@@ -218,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormPacientes.resx">
       <DependentUpon>FormPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormUsuarios.resx">
+      <DependentUpon>FormUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

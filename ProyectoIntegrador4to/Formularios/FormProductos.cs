@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ProyectoIntegrador4to
 {
-    public partial class FormProductos: Form
+    public partial class FormProductos : Form
     {
         public FormProductos()
         {
@@ -66,22 +66,22 @@ namespace ProyectoIntegrador4to
                 MessageBox.Show("La cantidad es requerida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 valido = false;
             }
-            if(numExistencia.Value <= 0)
+            if (numExistencia.Value <= 0)
             {
                 MessageBox.Show("La existencia es requerida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 valido = false;
             }
-            if(string.IsNullOrEmpty(tbMedida.Text))
+            if (string.IsNullOrEmpty(tbMedida.Text))
             {
                 MessageBox.Show("La medida es requerida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 valido = false;
             }
-            if(string.IsNullOrEmpty(dtpCaducidad.Text))
+            if (string.IsNullOrEmpty(dtpCaducidad.Text))
             {
                 MessageBox.Show("La caducidad es requerida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 valido = false;
             }
-            if(string.IsNullOrEmpty(cbProveedores.Text))
+            if (string.IsNullOrEmpty(cbProveedores.Text))
             {
                 MessageBox.Show("El proveedor es requerido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 valido = false;
@@ -103,7 +103,7 @@ namespace ProyectoIntegrador4to
         {
             try
             {
-                if(!validarCampos())
+                if (!validarCampos())
                     return;
                 Modelos.ModeloProductos datosProducto = new Modelos.ModeloProductos();
                 datosFormulario(datosProducto);
@@ -144,7 +144,7 @@ namespace ProyectoIntegrador4to
 
         private void dgProductos_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if(e.RowIndex < 0) return; // Verifica si la fila es válida
+            if (e.RowIndex < 0) return;
 
             var fila = dgProductos.Rows[e.RowIndex];
 
@@ -156,15 +156,22 @@ namespace ProyectoIntegrador4to
             numExistencia.Value = Convert.ToDecimal(fila.Cells[5].Value);
             tbMedida.Text = fila.Cells[6].Value.ToString();
             dtpCaducidad.Value = Convert.ToDateTime(fila.Cells[7].Value);
-            SeleccionarItemPorValor(cbProveedores, fila.Cells[8].Value.ToString());
-            SeleccionarItemPorValor(cbCategorias, fila.Cells[9].Value.ToString());
+
+            // Usar los IDs ocultos en lugar de los nombres
+            int idProveedor = Convert.ToInt32(fila.Cells["id_proveedor"].Value);
+            int idCategoria = Convert.ToInt32(fila.Cells["id_categoria"].Value);
+
+            // Seleccionar por ID
+            cbProveedores.SelectedValue = idProveedor;
+            cbCategorias.SelectedValue = idCategoria;
 
             
         }
+        
 
         private void SeleccionarItemPorValor(ComboBox comboBox, string valor)
         {
-            foreach(DataRowView item in comboBox.Items)
+            foreach (DataRowView item in comboBox.Items)
             {
                 if (item.Row.ItemArray[0].ToString() == valor)
                 {
@@ -177,7 +184,7 @@ namespace ProyectoIntegrador4to
 
         private void btEliminar_Click(object sender, EventArgs e)
         {
-            if(dgProductos.SelectedRows.Count > 0)
+            if (dgProductos.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = dgProductos.SelectedRows[0];
                 int idProducto = Convert.ToInt32(row.Cells[0].Value);
@@ -185,7 +192,7 @@ namespace ProyectoIntegrador4to
 
                 DialogResult resultado = MessageBox.Show($"¿Está seguro de eliminar el producto {nombreProducto}?", "Eliminar Producto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                if(resultado == DialogResult.Yes)
+                if (resultado == DialogResult.Yes)
                 {
                     Controladores.ControladorProductos controladorProducto = new Controladores.ControladorProductos();
                     controladorProducto.eliminarProducto(idProducto);

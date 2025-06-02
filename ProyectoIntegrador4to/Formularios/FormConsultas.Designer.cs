@@ -1,6 +1,6 @@
 ﻿namespace ProyectoIntegrador4to.Formularios
 {
-    partial class FormTutores
+    partial class FormConsultas
     {
         /// <summary>
         /// Required designer variable.
@@ -44,10 +44,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.lbNombrePantalla = new System.Windows.Forms.Label();
-            this.dgConsultas = new System.Windows.Forms.DataGridView();
+            this.dgTutores = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgConsultas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgTutores)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -66,8 +66,8 @@
             this.groupBox2.Controls.Add(this.lblNombre);
             this.groupBox2.Location = new System.Drawing.Point(12, 450);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1411, 358);
-            this.groupBox2.TabIndex = 3;
+            this.groupBox2.Size = new System.Drawing.Size(1411, 201);
+            this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
             // tbTelefono
@@ -75,7 +75,7 @@
             this.tbTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.tbTelefono.Location = new System.Drawing.Point(876, 165);
+            this.tbTelefono.Location = new System.Drawing.Point(876, 87);
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.ShortcutsEnabled = false;
             this.tbTelefono.Size = new System.Drawing.Size(176, 27);
@@ -86,7 +86,7 @@
             this.lblTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblTelefono.Location = new System.Drawing.Point(762, 166);
+            this.lblTelefono.Location = new System.Drawing.Point(762, 88);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(108, 22);
             this.lblTelefono.TabIndex = 81;
@@ -97,7 +97,7 @@
             this.tbDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.tbDireccion.Location = new System.Drawing.Point(492, 164);
+            this.tbDireccion.Location = new System.Drawing.Point(492, 86);
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.ShortcutsEnabled = false;
             this.tbDireccion.Size = new System.Drawing.Size(176, 27);
@@ -108,7 +108,7 @@
             this.lblDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblDireccion.Location = new System.Drawing.Point(377, 166);
+            this.lblDireccion.Location = new System.Drawing.Point(377, 88);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(109, 22);
             this.lblDireccion.TabIndex = 74;
@@ -122,13 +122,12 @@
             this.btEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btEliminar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btEliminar.Location = new System.Drawing.Point(1216, 200);
+            this.btEliminar.Location = new System.Drawing.Point(1216, 122);
             this.btEliminar.Name = "btEliminar";
             this.btEliminar.Size = new System.Drawing.Size(116, 35);
             this.btEliminar.TabIndex = 15;
             this.btEliminar.Text = "ELIMINAR";
             this.btEliminar.UseVisualStyleBackColor = false;
-            this.btEliminar.Click += new System.EventHandler(this.btEliminar_Click);
             // 
             // btEditar
             // 
@@ -137,13 +136,12 @@
             this.btEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btEditar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btEditar.Location = new System.Drawing.Point(1216, 159);
+            this.btEditar.Location = new System.Drawing.Point(1216, 81);
             this.btEditar.Name = "btEditar";
             this.btEditar.Size = new System.Drawing.Size(116, 35);
             this.btEditar.TabIndex = 14;
             this.btEditar.Text = "EDITAR";
             this.btEditar.UseVisualStyleBackColor = false;
-            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
             // btAgregar
             // 
@@ -152,20 +150,19 @@
             this.btAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btAgregar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btAgregar.Location = new System.Drawing.Point(1216, 118);
+            this.btAgregar.Location = new System.Drawing.Point(1216, 40);
             this.btAgregar.Name = "btAgregar";
             this.btAgregar.Size = new System.Drawing.Size(116, 35);
             this.btAgregar.TabIndex = 13;
             this.btAgregar.Text = "AGREGAR";
             this.btAgregar.UseVisualStyleBackColor = false;
-            this.btAgregar.Click += new System.EventHandler(this.btAgregar_Click);
             // 
             // tbNombre
             // 
             this.tbNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.tbNombre.Location = new System.Drawing.Point(154, 165);
+            this.tbNombre.Location = new System.Drawing.Point(154, 87);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(176, 27);
             this.tbNombre.TabIndex = 3;
@@ -175,7 +172,7 @@
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblNombre.Location = new System.Drawing.Point(60, 167);
+            this.lblNombre.Location = new System.Drawing.Point(60, 89);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(88, 22);
             this.lblNombre.TabIndex = 2;
@@ -191,11 +188,11 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.lblFiltrar);
             this.groupBox1.Controls.Add(this.lbNombrePantalla);
-            this.groupBox1.Controls.Add(this.dgConsultas);
+            this.groupBox1.Controls.Add(this.dgTutores);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1411, 587);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.Size = new System.Drawing.Size(1411, 430);
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // textBox1
@@ -244,37 +241,36 @@
             this.lbNombrePantalla.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNombrePantalla.Location = new System.Drawing.Point(6, 16);
             this.lbNombrePantalla.Name = "lbNombrePantalla";
-            this.lbNombrePantalla.Size = new System.Drawing.Size(135, 22);
+            this.lbNombrePantalla.Size = new System.Drawing.Size(103, 22);
             this.lbNombrePantalla.TabIndex = 1;
-            this.lbNombrePantalla.Text = "CONSULTAS ";
+            this.lbNombrePantalla.Text = "TUTORES";
             // 
-            // dgConsultas
+            // dgTutores
             // 
-            this.dgConsultas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgTutores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgConsultas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgConsultas.Location = new System.Drawing.Point(6, 44);
-            this.dgConsultas.Name = "dgConsultas";
-            this.dgConsultas.Size = new System.Drawing.Size(1399, 537);
-            this.dgConsultas.TabIndex = 0;
-            this.dgConsultas.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgTutores_RowHeaderMouseClick);
+            this.dgTutores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgTutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgTutores.Location = new System.Drawing.Point(6, 44);
+            this.dgTutores.Name = "dgTutores";
+            this.dgTutores.Size = new System.Drawing.Size(1399, 380);
+            this.dgTutores.TabIndex = 0;
             // 
-            // FormTutores
+            // FormConsultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1435, 820);
+            this.ClientSize = new System.Drawing.Size(1435, 663);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FormTutores";
-            this.Text = "FormTutores";
+            this.Name = "FormConsultas";
+            this.Text = "FormConsultas";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgConsultas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgTutores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,6 +278,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox tbTelefono;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.TextBox tbDireccion;
         private System.Windows.Forms.Label lblDireccion;
@@ -296,7 +293,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblFiltrar;
         private System.Windows.Forms.Label lbNombrePantalla;
-        private System.Windows.Forms.DataGridView dgConsultas;
-        private System.Windows.Forms.TextBox tbTelefono;
+        private System.Windows.Forms.DataGridView dgTutores;
     }
 }

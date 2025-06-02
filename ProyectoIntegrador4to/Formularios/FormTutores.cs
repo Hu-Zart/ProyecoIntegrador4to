@@ -20,7 +20,7 @@ namespace ProyectoIntegrador4to.Formularios
         public void cargarDatos()
         {
             Controladores.ControladorTutores objetoControlador = new Controladores.ControladorTutores();
-            objetoControlador.consultarTutores(dgTutores);
+            objetoControlador.consultarTutores(dgConsultas);
         }
 
         public void datosFormulario(Modelos.ModeloTutores objetoTutor)
@@ -102,7 +102,7 @@ namespace ProyectoIntegrador4to.Formularios
         {
             if (e.RowIndex < 0) return;
 
-            var fila = dgTutores.Rows[e.RowIndex];
+            var fila = dgConsultas.Rows[e.RowIndex];
 
             idTutor = Convert.ToInt32(fila.Cells["ID"].Value);
             string nombre = fila.Cells["Nombre"].Value?.ToString() ?? "";
@@ -116,9 +116,9 @@ namespace ProyectoIntegrador4to.Formularios
 
         private void btEliminar_Click(object sender, EventArgs e)
         {
-            if (dgTutores.SelectedRows.Count > 0)
+            if (dgConsultas.SelectedRows.Count > 0)
             {
-                DataGridViewRow row = dgTutores.SelectedRows[0];
+                DataGridViewRow row = dgConsultas.SelectedRows[0];
                 int idTutor = Convert.ToInt32(row.Cells["ID"].Value);
                 string nombreTutor = row.Cells["Nombre"].Value?.ToString() ?? "";
 

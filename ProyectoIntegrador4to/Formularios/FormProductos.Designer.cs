@@ -78,6 +78,7 @@
             this.groupBox1.Controls.Add(this.dgProductos);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 270);
             this.groupBox1.Size = new System.Drawing.Size(1411, 430);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -134,14 +135,15 @@
             // 
             // dgProductos
             // 
+            this.dgProductos.AllowUserToAddRows = false;
             this.dgProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProductos.Location = new System.Drawing.Point(6, 44);
+            this.dgProductos.Location = new System.Drawing.Point(12, 42);
             this.dgProductos.Name = "dgProductos";
-            this.dgProductos.Size = new System.Drawing.Size(1399, 380);
+            this.dgProductos.Size = new System.Drawing.Size(1399, 115);
             this.dgProductos.TabIndex = 0;
             this.dgProductos.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgProductos_RowHeaderMouseClick);
             // 
@@ -430,14 +432,14 @@
             this.lblDescripcion.TabIndex = 0;
             this.lblDescripcion.Text = "DESCRIPCIÓN";
             // 
-            // Form4Inventario
+            // FormProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1435, 663);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form4Inventario";
+            this.Name = "FormProductos";
             this.Text = "Form4Inventario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form4Inventario_Load);

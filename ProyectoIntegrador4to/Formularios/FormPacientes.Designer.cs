@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbDescripcion = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbCondicion = new System.Windows.Forms.ComboBox();
+            this.cbTutores = new System.Windows.Forms.ComboBox();
+            this.cbSexo = new System.Windows.Forms.ComboBox();
+            this.tbRaza = new System.Windows.Forms.TextBox();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.cbCategorias = new System.Windows.Forms.ComboBox();
+            this.cbReproductividad = new System.Windows.Forms.ComboBox();
             this.lblProveedor = new System.Windows.Forms.Label();
-            this.cbProveedores = new System.Windows.Forms.ComboBox();
+            this.cbEspecies = new System.Windows.Forms.ComboBox();
             this.lblCaducidad = new System.Windows.Forms.Label();
-            this.dtpCaducidad = new System.Windows.Forms.DateTimePicker();
-            this.tbMedida = new System.Windows.Forms.TextBox();
+            this.dtpNacimiento = new System.Windows.Forms.DateTimePicker();
             this.lblMedida = new System.Windows.Forms.Label();
-            this.numExistencia = new System.Windows.Forms.NumericUpDown();
+            this.numPeso = new System.Windows.Forms.NumericUpDown();
             this.lblExistencia = new System.Windows.Forms.Label();
-            this.numCosto = new System.Windows.Forms.NumericUpDown();
             this.lbCosto = new System.Windows.Forms.Label();
-            this.numPrecio = new System.Windows.Forms.NumericUpDown();
             this.btEliminar = new System.Windows.Forms.Button();
             this.btEditar = new System.Windows.Forms.Button();
             this.btAgregar = new System.Windows.Forms.Button();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.tbDescripcion = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
+            this.dgPacientes = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.lbNombrePantalla = new System.Windows.Forms.Label();
-            this.dgPacientes = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numExistencia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numCosto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPeso)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPacientes)).BeginInit();
             this.SuspendLayout();
@@ -70,26 +70,28 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.tbDescripcion);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.cbCondicion);
+            this.groupBox2.Controls.Add(this.cbTutores);
+            this.groupBox2.Controls.Add(this.cbSexo);
+            this.groupBox2.Controls.Add(this.tbRaza);
             this.groupBox2.Controls.Add(this.lblCategoria);
-            this.groupBox2.Controls.Add(this.cbCategorias);
+            this.groupBox2.Controls.Add(this.cbReproductividad);
             this.groupBox2.Controls.Add(this.lblProveedor);
-            this.groupBox2.Controls.Add(this.cbProveedores);
+            this.groupBox2.Controls.Add(this.cbEspecies);
             this.groupBox2.Controls.Add(this.lblCaducidad);
-            this.groupBox2.Controls.Add(this.dtpCaducidad);
-            this.groupBox2.Controls.Add(this.tbMedida);
+            this.groupBox2.Controls.Add(this.dtpNacimiento);
             this.groupBox2.Controls.Add(this.lblMedida);
-            this.groupBox2.Controls.Add(this.numExistencia);
+            this.groupBox2.Controls.Add(this.numPeso);
             this.groupBox2.Controls.Add(this.lblExistencia);
-            this.groupBox2.Controls.Add(this.numCosto);
             this.groupBox2.Controls.Add(this.lbCosto);
-            this.groupBox2.Controls.Add(this.numPrecio);
             this.groupBox2.Controls.Add(this.btEliminar);
             this.groupBox2.Controls.Add(this.btEditar);
             this.groupBox2.Controls.Add(this.btAgregar);
             this.groupBox2.Controls.Add(this.lblPrecio);
             this.groupBox2.Controls.Add(this.tbNombre);
             this.groupBox2.Controls.Add(this.lblNombre);
-            this.groupBox2.Controls.Add(this.tbDescripcion);
             this.groupBox2.Controls.Add(this.lblDescripcion);
             this.groupBox2.Location = new System.Drawing.Point(12, 450);
             this.groupBox2.Name = "groupBox2";
@@ -97,159 +99,183 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
+            // tbDescripcion
+            // 
+            this.tbDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.tbDescripcion.Location = new System.Drawing.Point(411, 144);
+            this.tbDescripcion.Name = "tbDescripcion";
+            this.tbDescripcion.Size = new System.Drawing.Size(677, 27);
+            this.tbDescripcion.TabIndex = 87;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label1.Location = new System.Drawing.Point(72, 149);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(333, 22);
+            this.label1.TabIndex = 86;
+            this.label1.Text = "SEÑAS PRATIVULAES/ DESCRIPCIÓN";
+            // 
+            // cbCondicion
+            // 
+            this.cbCondicion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbCondicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cbCondicion.FormattingEnabled = true;
+            this.cbCondicion.Location = new System.Drawing.Point(876, 78);
+            this.cbCondicion.Name = "cbCondicion";
+            this.cbCondicion.Size = new System.Drawing.Size(212, 28);
+            this.cbCondicion.TabIndex = 85;
+            // 
+            // cbTutores
+            // 
+            this.cbTutores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbTutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cbTutores.FormattingEnabled = true;
+            this.cbTutores.Location = new System.Drawing.Point(492, 108);
+            this.cbTutores.Name = "cbTutores";
+            this.cbTutores.Size = new System.Drawing.Size(176, 28);
+            this.cbTutores.TabIndex = 84;
+            // 
+            // cbSexo
+            // 
+            this.cbSexo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cbSexo.FormattingEnabled = true;
+            this.cbSexo.Items.AddRange(new object[] {
+            "Macho",
+            "Hembra"});
+            this.cbSexo.Location = new System.Drawing.Point(492, 45);
+            this.cbSexo.Name = "cbSexo";
+            this.cbSexo.Size = new System.Drawing.Size(176, 28);
+            this.cbSexo.TabIndex = 83;
+            // 
+            // tbRaza
+            // 
+            this.tbRaza.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbRaza.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbRaza.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.tbRaza.Location = new System.Drawing.Point(166, 108);
+            this.tbRaza.Name = "tbRaza";
+            this.tbRaza.Size = new System.Drawing.Size(176, 27);
+            this.tbRaza.TabIndex = 82;
+            // 
             // lblCategoria
             // 
             this.lblCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblCategoria.Location = new System.Drawing.Point(745, 113);
+            this.lblCategoria.Location = new System.Drawing.Point(687, 113);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(116, 22);
+            this.lblCategoria.Size = new System.Drawing.Size(183, 22);
             this.lblCategoria.TabIndex = 81;
-            this.lblCategoria.Text = "CATEGORIA";
+            this.lblCategoria.Text = "REPRODUCTIVIDAD";
             // 
-            // cbCategorias
+            // cbReproductividad
             // 
-            this.cbCategorias.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.cbCategorias.FormattingEnabled = true;
-            this.cbCategorias.Location = new System.Drawing.Point(876, 110);
-            this.cbCategorias.Name = "cbCategorias";
-            this.cbCategorias.Size = new System.Drawing.Size(212, 28);
-            this.cbCategorias.TabIndex = 80;
+            this.cbReproductividad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbReproductividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cbReproductividad.FormattingEnabled = true;
+            this.cbReproductividad.Items.AddRange(new object[] {
+            "Esterilizado",
+            "No esterilizado"});
+            this.cbReproductividad.Location = new System.Drawing.Point(876, 110);
+            this.cbReproductividad.Name = "cbReproductividad";
+            this.cbReproductividad.Size = new System.Drawing.Size(212, 28);
+            this.cbReproductividad.TabIndex = 80;
             // 
             // lblProveedor
             // 
             this.lblProveedor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblProveedor.AutoSize = true;
             this.lblProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblProveedor.Location = new System.Drawing.Point(745, 81);
+            this.lblProveedor.Location = new System.Drawing.Point(759, 82);
             this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(125, 22);
+            this.lblProveedor.Size = new System.Drawing.Size(111, 22);
             this.lblProveedor.TabIndex = 79;
-            this.lblProveedor.Text = "PROVEEDOR";
+            this.lblProveedor.Text = "CONDICION";
             // 
-            // cbProveedores
+            // cbEspecies
             // 
-            this.cbProveedores.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.cbProveedores.FormattingEnabled = true;
-            this.cbProveedores.Location = new System.Drawing.Point(876, 78);
-            this.cbProveedores.Name = "cbProveedores";
-            this.cbProveedores.Size = new System.Drawing.Size(212, 28);
-            this.cbProveedores.TabIndex = 78;
+            this.cbEspecies.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbEspecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cbEspecies.FormattingEnabled = true;
+            this.cbEspecies.Location = new System.Drawing.Point(166, 76);
+            this.cbEspecies.Name = "cbEspecies";
+            this.cbEspecies.Size = new System.Drawing.Size(176, 28);
+            this.cbEspecies.TabIndex = 78;
             // 
             // lblCaducidad
             // 
             this.lblCaducidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCaducidad.AutoSize = true;
             this.lblCaducidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblCaducidad.Location = new System.Drawing.Point(754, 48);
+            this.lblCaducidad.Location = new System.Drawing.Point(749, 48);
             this.lblCaducidad.Name = "lblCaducidad";
-            this.lblCaducidad.Size = new System.Drawing.Size(116, 22);
+            this.lblCaducidad.Size = new System.Drawing.Size(121, 22);
             this.lblCaducidad.TabIndex = 77;
-            this.lblCaducidad.Text = "CADUCIDAD";
+            this.lblCaducidad.Text = "NACIMIENTO";
             // 
-            // dtpCaducidad
+            // dtpNacimiento
             // 
-            this.dtpCaducidad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpCaducidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.dtpCaducidad.Location = new System.Drawing.Point(876, 46);
-            this.dtpCaducidad.Name = "dtpCaducidad";
-            this.dtpCaducidad.Size = new System.Drawing.Size(212, 27);
-            this.dtpCaducidad.TabIndex = 76;
-            // 
-            // tbMedida
-            // 
-            this.tbMedida.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbMedida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.tbMedida.Location = new System.Drawing.Point(492, 108);
-            this.tbMedida.Name = "tbMedida";
-            this.tbMedida.ShortcutsEnabled = false;
-            this.tbMedida.Size = new System.Drawing.Size(176, 27);
-            this.tbMedida.TabIndex = 75;
+            this.dtpNacimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.dtpNacimiento.Location = new System.Drawing.Point(876, 46);
+            this.dtpNacimiento.Name = "dtpNacimiento";
+            this.dtpNacimiento.Size = new System.Drawing.Size(212, 27);
+            this.dtpNacimiento.TabIndex = 76;
             // 
             // lblMedida
             // 
             this.lblMedida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMedida.AutoSize = true;
             this.lblMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblMedida.Location = new System.Drawing.Point(408, 110);
+            this.lblMedida.Location = new System.Drawing.Point(412, 110);
             this.lblMedida.Name = "lblMedida";
-            this.lblMedida.Size = new System.Drawing.Size(78, 22);
+            this.lblMedida.Size = new System.Drawing.Size(74, 22);
             this.lblMedida.TabIndex = 74;
-            this.lblMedida.Text = "MEDIDA";
+            this.lblMedida.Text = "TUTOR";
             // 
-            // numExistencia
+            // numPeso
             // 
-            this.numExistencia.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numExistencia.DecimalPlaces = 2;
-            this.numExistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.numExistencia.Location = new System.Drawing.Point(492, 76);
-            this.numExistencia.Margin = new System.Windows.Forms.Padding(2);
-            this.numExistencia.Maximum = new decimal(new int[] {
+            this.numPeso.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numPeso.DecimalPlaces = 2;
+            this.numPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.numPeso.Location = new System.Drawing.Point(492, 76);
+            this.numPeso.Margin = new System.Windows.Forms.Padding(2);
+            this.numPeso.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.numExistencia.Name = "numExistencia";
-            this.numExistencia.Size = new System.Drawing.Size(176, 27);
-            this.numExistencia.TabIndex = 73;
+            this.numPeso.Name = "numPeso";
+            this.numPeso.Size = new System.Drawing.Size(176, 27);
+            this.numPeso.TabIndex = 73;
             // 
             // lblExistencia
             // 
             this.lblExistencia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblExistencia.AutoSize = true;
             this.lblExistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblExistencia.Location = new System.Drawing.Point(371, 78);
+            this.lblExistencia.Location = new System.Drawing.Point(388, 78);
             this.lblExistencia.Name = "lblExistencia";
-            this.lblExistencia.Size = new System.Drawing.Size(116, 22);
+            this.lblExistencia.Size = new System.Drawing.Size(99, 22);
             this.lblExistencia.TabIndex = 72;
-            this.lblExistencia.Text = "EXISTENCIA";
-            // 
-            // numCosto
-            // 
-            this.numCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numCosto.DecimalPlaces = 2;
-            this.numCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.numCosto.Location = new System.Drawing.Point(492, 45);
-            this.numCosto.Margin = new System.Windows.Forms.Padding(2);
-            this.numCosto.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.numCosto.Name = "numCosto";
-            this.numCosto.Size = new System.Drawing.Size(176, 27);
-            this.numCosto.TabIndex = 71;
+            this.lblExistencia.Text = "PESO (Kg)";
             // 
             // lbCosto
             // 
             this.lbCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbCosto.AutoSize = true;
             this.lbCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lbCosto.Location = new System.Drawing.Point(409, 47);
+            this.lbCosto.Location = new System.Drawing.Point(427, 46);
             this.lbCosto.Name = "lbCosto";
-            this.lbCosto.Size = new System.Drawing.Size(75, 22);
+            this.lbCosto.Size = new System.Drawing.Size(60, 22);
             this.lbCosto.TabIndex = 70;
-            this.lbCosto.Text = "COSTO";
-            // 
-            // numPrecio
-            // 
-            this.numPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numPrecio.DecimalPlaces = 2;
-            this.numPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.numPrecio.Location = new System.Drawing.Point(166, 111);
-            this.numPrecio.Margin = new System.Windows.Forms.Padding(2);
-            this.numPrecio.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.numPrecio.Name = "numPrecio";
-            this.numPrecio.Size = new System.Drawing.Size(176, 27);
-            this.numPrecio.TabIndex = 69;
+            this.lbCosto.Text = "SEXO";
             // 
             // btEliminar
             // 
@@ -265,6 +291,7 @@
             this.btEliminar.TabIndex = 15;
             this.btEliminar.Text = "ELIMINAR";
             this.btEliminar.UseVisualStyleBackColor = false;
+            this.btEliminar.Click += new System.EventHandler(this.btEliminar_Click);
             // 
             // btEditar
             // 
@@ -279,6 +306,7 @@
             this.btEditar.TabIndex = 14;
             this.btEditar.Text = "EDITAR";
             this.btEditar.UseVisualStyleBackColor = false;
+            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
             // btAgregar
             // 
@@ -293,17 +321,18 @@
             this.btAgregar.TabIndex = 13;
             this.btAgregar.Text = "AGREGAR";
             this.btAgregar.UseVisualStyleBackColor = false;
+            this.btAgregar.Click += new System.EventHandler(this.btAgregar_Click);
             // 
             // lblPrecio
             // 
             this.lblPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblPrecio.Location = new System.Drawing.Point(83, 113);
+            this.lblPrecio.Location = new System.Drawing.Point(102, 110);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(78, 22);
+            this.lblPrecio.Size = new System.Drawing.Size(58, 22);
             this.lblPrecio.TabIndex = 4;
-            this.lblPrecio.Text = "PRECIO";
+            this.lblPrecio.Text = "RAZA";
             // 
             // tbNombre
             // 
@@ -326,26 +355,16 @@
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "NOMBRE";
             // 
-            // tbDescripcion
-            // 
-            this.tbDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.tbDescripcion.Location = new System.Drawing.Point(166, 79);
-            this.tbDescripcion.Name = "tbDescripcion";
-            this.tbDescripcion.Size = new System.Drawing.Size(176, 27);
-            this.tbDescripcion.TabIndex = 1;
-            // 
             // lblDescripcion
             // 
             this.lblDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblDescripcion.Location = new System.Drawing.Point(27, 81);
+            this.lblDescripcion.Location = new System.Drawing.Point(73, 78);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(133, 22);
+            this.lblDescripcion.Size = new System.Drawing.Size(87, 22);
             this.lblDescripcion.TabIndex = 0;
-            this.lblDescripcion.Text = "DESCRIPCIÓN";
+            this.lblDescripcion.Text = "ESPECIE";
             // 
             // groupBox1
             // 
@@ -354,12 +373,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.lblBuscar);
+            this.groupBox1.Controls.Add(this.dgPacientes);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.lblFiltrar);
             this.groupBox1.Controls.Add(this.lbNombrePantalla);
-            this.groupBox1.Controls.Add(this.dgPacientes);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 270);
             this.groupBox1.Size = new System.Drawing.Size(1411, 430);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -379,6 +399,21 @@
             this.lblBuscar.Size = new System.Drawing.Size(51, 13);
             this.lblBuscar.TabIndex = 4;
             this.lblBuscar.Text = "BUSCAR";
+            // 
+            // dgPacientes
+            // 
+            this.dgPacientes.AllowUserToAddRows = false;
+            this.dgPacientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPacientes.Location = new System.Drawing.Point(0, 41);
+            this.dgPacientes.Name = "dgPacientes";
+            this.dgPacientes.RowHeadersWidth = 20;
+            this.dgPacientes.Size = new System.Drawing.Size(1411, 116);
+            this.dgPacientes.TabIndex = 0;
+            this.dgPacientes.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgPacientes_RowHeaderMouseClick);
             // 
             // comboBox1
             // 
@@ -414,32 +449,18 @@
             this.lbNombrePantalla.TabIndex = 1;
             this.lbNombrePantalla.Text = "PACIENTES";
             // 
-            // dgPacientes
-            // 
-            this.dgPacientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPacientes.Location = new System.Drawing.Point(6, 44);
-            this.dgPacientes.Name = "dgPacientes";
-            this.dgPacientes.Size = new System.Drawing.Size(1399, 380);
-            this.dgPacientes.TabIndex = 0;
-            // 
-            // FormularioPacientes
+            // FormPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1435, 663);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FormularioPacientes";
+            this.Name = "FormPacientes";
             this.Text = "FormularioPacientes";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numExistencia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numCosto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPeso)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPacientes)).EndInit();
@@ -451,25 +472,21 @@
 
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.ComboBox cbCategorias;
+        private System.Windows.Forms.ComboBox cbReproductividad;
         private System.Windows.Forms.Label lblProveedor;
-        private System.Windows.Forms.ComboBox cbProveedores;
+        private System.Windows.Forms.ComboBox cbEspecies;
         private System.Windows.Forms.Label lblCaducidad;
-        private System.Windows.Forms.DateTimePicker dtpCaducidad;
-        private System.Windows.Forms.TextBox tbMedida;
+        private System.Windows.Forms.DateTimePicker dtpNacimiento;
         private System.Windows.Forms.Label lblMedida;
-        public System.Windows.Forms.NumericUpDown numExistencia;
+        public System.Windows.Forms.NumericUpDown numPeso;
         private System.Windows.Forms.Label lblExistencia;
-        public System.Windows.Forms.NumericUpDown numCosto;
         private System.Windows.Forms.Label lbCosto;
-        public System.Windows.Forms.NumericUpDown numPrecio;
         private System.Windows.Forms.Button btEliminar;
         private System.Windows.Forms.Button btEditar;
         private System.Windows.Forms.Button btAgregar;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox tbDescripcion;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox1;
@@ -478,5 +495,11 @@
         private System.Windows.Forms.Label lblFiltrar;
         private System.Windows.Forms.Label lbNombrePantalla;
         private System.Windows.Forms.DataGridView dgPacientes;
+        private System.Windows.Forms.TextBox tbRaza;
+        private System.Windows.Forms.ComboBox cbSexo;
+        private System.Windows.Forms.ComboBox cbTutores;
+        private System.Windows.Forms.ComboBox cbCondicion;
+        private System.Windows.Forms.TextBox tbDescripcion;
+        private System.Windows.Forms.Label label1;
     }
 }

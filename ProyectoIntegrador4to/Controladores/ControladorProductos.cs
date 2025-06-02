@@ -12,7 +12,76 @@ namespace ProyectoIntegrador4to.Controladores
 {
     internal class ControladorProductos
     {
+
         public void consultarProductos(DataGridView dgProductos)
+        {
+            Conexion.Conexion conexion = new Conexion.Conexion();
+            DataTable dtProductos = new DataTable();
+
+
+            dtProductos.Columns.Add("ID", typeof(int));
+            dtProductos.Columns.Add("Nombre", typeof(string));
+            dtProductos.Columns.Add("Descripción", typeof(string));
+            dtProductos.Columns.Add("Precio", typeof(float));
+            dtProductos.Columns.Add("Costo", typeof(float));
+            dtProductos.Columns.Add("Existencia", typeof(int));
+            dtProductos.Columns.Add("Medida", typeof(string));
+            dtProductos.Columns.Add("Caducidad", typeof(DateTime));
+            dtProductos.Columns.Add("Proveedor", typeof(string));
+            dtProductos.Columns.Add("Categoria", typeof(string));
+
+            // Ocultar columnas
+            dtProductos.Columns.Add("id_proveedor", typeof(int));
+            dtProductos.Columns.Add("id_categoria", typeof(int));
+
+            string sql = @"SELECT p.id_producto, p.nombre, p.descripcion, p.precio, p.costo, p.existencia, 
+                          p.unidad_medida, p.fecha_caducidad, 
+                          pr.nombre AS nombre_proveedor, pr.id_proveedor,
+                          c.nombre AS nombre_categoria, c.id_categoria
+                   FROM productos p 
+                   INNER JOIN proveedores pr ON p.id_proveedor = pr.id_proveedor 
+                   INNER JOIN categorias c ON p.id_categoria = c.id_categoria";
+
+            try
+            {
+                using (MySqlConnection sqlConnection = conexion.establecerConexion())
+                {
+                    MySqlCommand sqlCommand = new MySqlCommand(sql, sqlConnection);
+                    MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(sqlCommand);
+
+                    DataTable dtDatos = new DataTable();
+                    sqlDataAdapter.Fill(dtDatos);
+
+                    foreach (DataRow row in dtDatos.Rows)
+                    {
+                        dtProductos.Rows.Add(
+                            Convert.ToInt32(row["id_producto"]),      
+                            row["nombre"].ToString(),               
+                            row["descripcion"].ToString(),        
+                            Convert.ToSingle(row["precio"]),
+                            Convert.ToSingle(row["costo"]),           
+                            Convert.ToInt32(row["existencia"]),      
+                            row["unidad_medida"].ToString(),    
+                            Convert.ToDateTime(row["fecha_caducidad"]), 
+                            row["nombre_proveedor"].ToString(),       
+                            row["nombre_categoria"].ToString(),  
+                            Convert.ToInt32(row["id_proveedor"]),     
+                            Convert.ToInt32(row["id_categoria"])      
+                        );
+                    }
+
+                    dgProductos.DataSource = dtProductos;
+
+                    dgProductos.Columns["id_proveedor"].Visible = false;
+                    dgProductos.Columns["id_categoria"].Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar los productos: " + ex.Message);
+            }
+        }
+        public void consultarProductosss(DataGridView dgProductos)
         {
             Conexion.Conexion conexion = new Conexion.Conexion();
             Modelos.ModeloProductos objetoProductos = new Modelos.ModeloProductos();
@@ -115,7 +184,44 @@ namespace ProyectoIntegrador4to.Controladores
             }
         }
 
-        public void consultaProveedores(ComboBox cbProveedores)
+        public void consultaProveedores(ComboBox cbProveedores) 
+        {
+            Conexion.Conexion conexion = new Conexion.Conexion();
+            DataTable dtProveedores = new DataTable();
+
+            try
+            {
+                // Configurar DataTable
+                dtProveedores.Columns.Add("ID", typeof(int));
+                dtProveedores.Columns.Add("Nombre", typeof(string));
+
+                // Obtener conexión
+                MySqlConnection sqlConexion = conexion.establecerConexion();
+
+                // Crear y ejecutar comando
+                string sql = "SELECT id_proveedor, nombre FROM proveedores";
+                MySqlCommand cmd = new MySqlCommand(sql, sqlConexion);
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
+
+                // Llenar DataTable
+                adaptador.Fill(dtProveedores);
+
+                // Configurar ComboBox
+                cbProveedores.DataSource = dtProveedores;
+                cbProveedores.ValueMember = "ID";
+                cbProveedores.DisplayMember = "Nombre";
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al consultar los proveedores: " + e.Message);
+            }
+            finally
+            {
+                
+                conexion.cerrarConexion();
+            }
+        }
+        public void consultaProveedoress(ComboBox cbProveedores)
         {
             Conexion.Conexion conexion = new Conexion.Conexion();
             Modelos.ModeloProductos objetoProveedores = new Modelos.ModeloProductos();
@@ -284,7 +390,8 @@ namespace ProyectoIntegrador4to.Controladores
                 MySqlCommand sqlCommand = new MySqlCommand(sql, sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@id_producto", idProducto);
                 int filasAfectadas = sqlCommand.ExecuteNonQuery();
-                if (filasAfectadas > 0) MessageBox.Show("Producto eliminado correctamente.");            }
+                if (filasAfectadas > 0) MessageBox.Show("Producto eliminado correctamente.");
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al eliminar el producto: " + ex.Message);

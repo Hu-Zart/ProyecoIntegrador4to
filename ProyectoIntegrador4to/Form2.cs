@@ -69,5 +69,11 @@ namespace ProyectoIntegrador4to
 
             panel2.Controls.Add(lblMensaje);
         }
+
+        private void btRedirigirUsuarios_Click(object sender, EventArgs e)
+        {
+            Form formUsuarios = new FormUsuarios();
+            mOSTRARfORMULARIOeNpANEL(formUsuarios);
+        }
     }
 }

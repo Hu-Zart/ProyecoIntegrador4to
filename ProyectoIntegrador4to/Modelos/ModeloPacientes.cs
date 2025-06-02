@@ -12,7 +12,7 @@ namespace ProyectoIntegrador4to.Modelos
         string nombre;
         string especie;
         string raza;
-        string sexo;
+        bool sexo;
         string señasParticulares;
         double peso;
         DateTime fechaNacimiento;
@@ -24,7 +24,7 @@ namespace ProyectoIntegrador4to.Modelos
         public string Nombre { get => nombre; set => nombre = value; }
         public string Especie { get => especie; set => especie = value; }
         public string Raza { get => raza; set => raza = value; }
-        public string Sexo { get => sexo; set => sexo = value; }
+        public bool Sexo { get => sexo; set => sexo = value; }
         public string SeñasParticulares { get => señasParticulares; set => señasParticulares = value; }
         public double Peso { get => peso; set => peso = value; }
         public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
