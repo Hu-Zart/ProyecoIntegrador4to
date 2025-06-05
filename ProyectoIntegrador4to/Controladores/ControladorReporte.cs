@@ -14,7 +14,13 @@ namespace ProyectoIntegrador4to.Controladores
         public void reporteDetallesVenta(DataSet dsReporte, int idVentaSeleccionada)
         {
             Conexion.Conexion conexion = new Conexion.Conexion();
-            string sql = @"select p.nombre, cantidad, precio_venta from detalle_ventas d join productos p on d.id_producto = p.id_producto where id_venta = @idVenta";
+            string sql = @"SELECT 
+                p.nombre AS Producto, 
+                cantidad AS Cantidad, 
+                precio_venta AS Precio 
+               FROM detalle_ventas d 
+               JOIN productos p ON d.id_producto = p.id_producto 
+               WHERE id_venta = @idVenta";
             try
             {
                 MySqlConnection sqlConexion = conexion.establecerConexion();

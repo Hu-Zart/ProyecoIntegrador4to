@@ -13,6 +13,76 @@ namespace ProyectoIntegrador4to.Controladores
 {
     internal class ControladorVentas
     {
+        public void consultarVentas(DataGridView dgVentas)
+        {
+            // Instancia de tu clase de conexión
+            Conexion.Conexion conexion = new Conexion.Conexion();
+            DataTable dtVentas = new DataTable();
+
+            // Definimos las columnas que queremos mostrar en el DataGridView
+            dtVentas.Columns.Add("ID_Venta", typeof(int));
+            dtVentas.Columns.Add("ID_Tutor", typeof(int));
+            dtVentas.Columns.Add("ID_Usuario", typeof(int));
+            dtVentas.Columns.Add("Fecha_Venta", typeof(DateTime));
+            dtVentas.Columns.Add("Subtotal", typeof(decimal));
+
+            // Consulta SQL: traemos cada venta y le sumamos el subtotal de todos los detalles asociados
+            string sql = @"
+        SELECT 
+            v.id_venta,
+            v.id_tutor,
+            v.id_usuario,
+            v.fecha_venta,
+            IFNULL(SUM(d.cantidad * d.precio_venta), 0) AS subtotal
+        FROM ventas v
+        LEFT JOIN detalle_ventas d ON v.id_venta = d.id_venta
+        GROUP BY 
+            v.id_venta, 
+            v.id_tutor, 
+            v.id_usuario, 
+            v.fecha_venta
+        ORDER BY v.id_venta;
+    ";
+
+            try
+            {
+                using (MySqlConnection sqlConnection = conexion.establecerConexion())
+                {
+                    MySqlCommand sqlCommand = new MySqlCommand(sql, sqlConnection);
+                    MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(sqlCommand);
+
+                    DataTable dtDatos = new DataTable();
+                    sqlDataAdapter.Fill(dtDatos);
+
+                    // Llenamos nuestro DataTable personalizado con los resultados de la consulta
+                    foreach (DataRow row in dtDatos.Rows)
+                    {
+                        dtVentas.Rows.Add(
+                            Convert.ToInt32(row["id_venta"]),
+                            // El campo id_tutor puede ser NULL en la tabla, así que checamos antes de convertir
+                            row["id_tutor"] != DBNull.Value ? Convert.ToInt32(row["id_tutor"]) : 0,
+                            Convert.ToInt32(row["id_usuario"]),
+                            Convert.ToDateTime(row["fecha_venta"]),
+                            Convert.ToDecimal(row["subtotal"])
+                        );
+                    }
+
+                    // Asignamos el DataTable al DataGridView
+                    dgVentas.DataSource = dtVentas;
+
+                    // No ocultamos ninguna columna (se mostrarán ID_Venta, ID_Tutor, ID_Usuario, Fecha_Venta y Subtotal)
+
+                    // Opcional: Ajustar ancho o formato de columnas
+                    dgVentas.Columns["Fecha_Venta"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
+                    dgVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar las ventas: " + ex.Message);
+            }
+        }
+
         public void buscarProducto(DataGridView tablaTotalProductos, TextBox textoBuscar)
         {
             Conexion.Conexion objetoConexion = new Conexion.Conexion();
