@@ -11,20 +11,15 @@ namespace ProyectoIntegrador4to.Controladores
 {
     internal class ControladorReporte
     {
-        public void reporteDetallesVenta(DataSet dsReporte)
+        public void reporteDetallesVenta(DataSet dsReporte, int idVentaSeleccionada)
         {
             Conexion.Conexion conexion = new Conexion.Conexion();
-            string sql = @"SELECT
-                            p.nombre,
-                            p.email,
-                            c.titulo AS cursos
-                        FROM personas p
-                        INNER JOIN inscripciones i ON p.id = i.id_persona
-                        INNER JOIN cursos c ON i.id_curso = c.id";
+            string sql = @"select p.nombre, cantidad, precio_venta from detalle_ventas d join productos p on d.id_producto = p.id_producto where id_venta = @idVenta";
             try
             {
                 MySqlConnection sqlConexion = conexion.establecerConexion();
                 MySqlCommand comando = new MySqlCommand(sql, sqlConexion);
+                comando.Parameters.AddWithValue("@idVenta", idVentaSeleccionada);
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
                 adaptador.Fill(dsReporte);
             }
