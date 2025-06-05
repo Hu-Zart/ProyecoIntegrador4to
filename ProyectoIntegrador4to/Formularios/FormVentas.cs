@@ -122,5 +122,32 @@ namespace ProyectoIntegrador4to.Formularios
             objetoVenta.buscarProducto(dtgProductos, txtBuscarProductos);
             objetoVenta.buscarTutor(dgbClientes, txtBuscarCliente);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Controladores.ControladorVentas objetoVenta = new Controladores.ControladorVentas();
+
+            int idTutorConvertido;
+            // Intentamos convertir; si falla (cadena vacía o no-numérica), asignamos 0
+            if (!int.TryParse(txtIdCliente.Text.Trim(), out idTutorConvertido))
+            {
+                idTutorConvertido = 0;
+            }
+
+            // Ahora sí llamamos al método sin que int.Parse dé excepción
+            objetoVenta.crearFactura(idTutorConvertido, UsuarioActual.IdUsuario);
+            objetoVenta.realizarVenta(dtgResumenVenta);
+            objetoVenta.limpiarCampos(
+        txtIdProducto, txtNombreProducto, txtPrecioProducto, txtStockProducto, txtPrecioVentaFinal,
+        txtIdCliente, txtNombreCliente, txtDireccion, txtTelefono,
+        txtCantidadVenta,  // Nuevo parámetro agregado
+        dtgProductos, dgbClientes, dtgResumenVenta,
+        lblIva, lblTotalPagar,
+        txtBuscarProductos, txtBuscarCliente
+    );
+            objetoVenta.buscarProducto(dtgProductos, txtBuscarProductos);
+            objetoVenta.buscarTutor(dgbClientes, txtBuscarCliente);
+
+        }
     }
 }

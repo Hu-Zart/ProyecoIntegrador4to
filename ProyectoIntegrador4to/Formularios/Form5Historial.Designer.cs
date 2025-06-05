@@ -55,6 +55,7 @@
             this.dgvConsulta.Name = "dgvConsulta";
             this.dgvConsulta.Size = new System.Drawing.Size(458, 601);
             this.dgvConsulta.TabIndex = 1;
+            this.dgvConsulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsulta_CellClick);
             // 
             // button1
             // 

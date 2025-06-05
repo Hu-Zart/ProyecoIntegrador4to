@@ -46,5 +46,8 @@ namespace ProyectoIntegrador4to
             }
         }
 
+        private void dgvConsulta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
     }
 }
