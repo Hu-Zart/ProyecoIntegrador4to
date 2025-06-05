@@ -279,27 +279,11 @@ namespace ProyectoIntegrador4to.Reportes {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ConsultaDataTable : global::System.Data.TypedTableBase<ConsultaRow> {
             
-            private global::System.Data.DataColumn columnid_consulta;
+            private global::System.Data.DataColumn columnProducto;
             
-            private global::System.Data.DataColumn columnfecha_consulta;
+            private global::System.Data.DataColumn columnCantidad;
             
-            private global::System.Data.DataColumn columnmotivo;
-            
-            private global::System.Data.DataColumn columnanamnesis;
-            
-            private global::System.Data.DataColumn columndiagnostico;
-            
-            private global::System.Data.DataColumn columntratamiento;
-            
-            private global::System.Data.DataColumn columnpeso_actual;
-            
-            private global::System.Data.DataColumn columntemperatura;
-            
-            private global::System.Data.DataColumn columnpaciente_nombre;
-            
-            private global::System.Data.DataColumn columnespecie;
-            
-            private global::System.Data.DataColumn columnDataColumn1;
+            private global::System.Data.DataColumn columnPrecio;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -336,89 +320,25 @@ namespace ProyectoIntegrador4to.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn id_consultaColumn {
+            public global::System.Data.DataColumn ProductoColumn {
                 get {
-                    return this.columnid_consulta;
+                    return this.columnProducto;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn fecha_consultaColumn {
+            public global::System.Data.DataColumn CantidadColumn {
                 get {
-                    return this.columnfecha_consulta;
+                    return this.columnCantidad;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn motivoColumn {
+            public global::System.Data.DataColumn PrecioColumn {
                 get {
-                    return this.columnmotivo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn anamnesisColumn {
-                get {
-                    return this.columnanamnesis;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn diagnosticoColumn {
-                get {
-                    return this.columndiagnostico;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn tratamientoColumn {
-                get {
-                    return this.columntratamiento;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn peso_actualColumn {
-                get {
-                    return this.columnpeso_actual;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn temperaturaColumn {
-                get {
-                    return this.columntemperatura;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn paciente_nombreColumn {
-                get {
-                    return this.columnpaciente_nombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn especieColumn {
-                get {
-                    return this.columnespecie;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DataColumn1Column {
-                get {
-                    return this.columnDataColumn1;
+                    return this.columnPrecio;
                 }
             }
             
@@ -459,20 +379,12 @@ namespace ProyectoIntegrador4to.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ConsultaRow AddConsultaRow(string id_consulta, string fecha_consulta, string motivo, string anamnesis, string diagnostico, string tratamiento, string peso_actual, string temperatura, string paciente_nombre, string especie, string DataColumn1) {
+            public ConsultaRow AddConsultaRow(string Producto, string Cantidad, string Precio) {
                 ConsultaRow rowConsultaRow = ((ConsultaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id_consulta,
-                        fecha_consulta,
-                        motivo,
-                        anamnesis,
-                        diagnostico,
-                        tratamiento,
-                        peso_actual,
-                        temperatura,
-                        paciente_nombre,
-                        especie,
-                        DataColumn1};
+                        Producto,
+                        Cantidad,
+                        Precio};
                 rowConsultaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowConsultaRow);
                 return rowConsultaRow;
@@ -495,44 +407,20 @@ namespace ProyectoIntegrador4to.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid_consulta = base.Columns["id_consulta"];
-                this.columnfecha_consulta = base.Columns["fecha_consulta"];
-                this.columnmotivo = base.Columns["motivo"];
-                this.columnanamnesis = base.Columns["anamnesis"];
-                this.columndiagnostico = base.Columns["diagnostico"];
-                this.columntratamiento = base.Columns["tratamiento"];
-                this.columnpeso_actual = base.Columns["peso_actual"];
-                this.columntemperatura = base.Columns["temperatura"];
-                this.columnpaciente_nombre = base.Columns["paciente_nombre"];
-                this.columnespecie = base.Columns["especie"];
-                this.columnDataColumn1 = base.Columns["DataColumn1"];
+                this.columnProducto = base.Columns["Producto"];
+                this.columnCantidad = base.Columns["Cantidad"];
+                this.columnPrecio = base.Columns["Precio"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid_consulta = new global::System.Data.DataColumn("id_consulta", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_consulta);
-                this.columnfecha_consulta = new global::System.Data.DataColumn("fecha_consulta", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_consulta);
-                this.columnmotivo = new global::System.Data.DataColumn("motivo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmotivo);
-                this.columnanamnesis = new global::System.Data.DataColumn("anamnesis", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnanamnesis);
-                this.columndiagnostico = new global::System.Data.DataColumn("diagnostico", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndiagnostico);
-                this.columntratamiento = new global::System.Data.DataColumn("tratamiento", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntratamiento);
-                this.columnpeso_actual = new global::System.Data.DataColumn("peso_actual", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpeso_actual);
-                this.columntemperatura = new global::System.Data.DataColumn("temperatura", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntemperatura);
-                this.columnpaciente_nombre = new global::System.Data.DataColumn("paciente_nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpaciente_nombre);
-                this.columnespecie = new global::System.Data.DataColumn("especie", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnespecie);
-                this.columnDataColumn1 = new global::System.Data.DataColumn("DataColumn1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDataColumn1);
+                this.columnProducto = new global::System.Data.DataColumn("Producto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProducto);
+                this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCantidad);
+                this.columnPrecio = new global::System.Data.DataColumn("Precio", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrecio);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -675,310 +563,86 @@ namespace ProyectoIntegrador4to.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string id_consulta {
+            public string Producto {
                 get {
                     try {
-                        return ((string)(this[this.tableConsulta.id_consultaColumn]));
+                        return ((string)(this[this.tableConsulta.ProductoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_consulta\' de la tabla \'Consulta\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Producto\' de la tabla \'Consulta\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableConsulta.id_consultaColumn] = value;
+                    this[this.tableConsulta.ProductoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string fecha_consulta {
+            public string Cantidad {
                 get {
                     try {
-                        return ((string)(this[this.tableConsulta.fecha_consultaColumn]));
+                        return ((string)(this[this.tableConsulta.CantidadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_consulta\' de la tabla \'Consulta\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cantidad\' de la tabla \'Consulta\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableConsulta.fecha_consultaColumn] = value;
+                    this[this.tableConsulta.CantidadColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string motivo {
+            public string Precio {
                 get {
                     try {
-                        return ((string)(this[this.tableConsulta.motivoColumn]));
+                        return ((string)(this[this.tableConsulta.PrecioColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'motivo\' de la tabla \'Consulta\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Precio\' de la tabla \'Consulta\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableConsulta.motivoColumn] = value;
+                    this[this.tableConsulta.PrecioColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string anamnesis {
-                get {
-                    try {
-                        return ((string)(this[this.tableConsulta.anamnesisColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'anamnesis\' de la tabla \'Consulta\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConsulta.anamnesisColumn] = value;
-                }
+            public bool IsProductoNull() {
+                return this.IsNull(this.tableConsulta.ProductoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string diagnostico {
-                get {
-                    try {
-                        return ((string)(this[this.tableConsulta.diagnosticoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'diagnostico\' de la tabla \'Consulta\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConsulta.diagnosticoColumn] = value;
-                }
+            public void SetProductoNull() {
+                this[this.tableConsulta.ProductoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string tratamiento {
-                get {
-                    try {
-                        return ((string)(this[this.tableConsulta.tratamientoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tratamiento\' de la tabla \'Consulta\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConsulta.tratamientoColumn] = value;
-                }
+            public bool IsCantidadNull() {
+                return this.IsNull(this.tableConsulta.CantidadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string peso_actual {
-                get {
-                    try {
-                        return ((string)(this[this.tableConsulta.peso_actualColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'peso_actual\' de la tabla \'Consulta\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConsulta.peso_actualColumn] = value;
-                }
+            public void SetCantidadNull() {
+                this[this.tableConsulta.CantidadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string temperatura {
-                get {
-                    try {
-                        return ((string)(this[this.tableConsulta.temperaturaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'temperatura\' de la tabla \'Consulta\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConsulta.temperaturaColumn] = value;
-                }
+            public bool IsPrecioNull() {
+                return this.IsNull(this.tableConsulta.PrecioColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string paciente_nombre {
-                get {
-                    try {
-                        return ((string)(this[this.tableConsulta.paciente_nombreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'paciente_nombre\' de la tabla \'Consulta\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConsulta.paciente_nombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string especie {
-                get {
-                    try {
-                        return ((string)(this[this.tableConsulta.especieColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'especie\' de la tabla \'Consulta\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConsulta.especieColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string DataColumn1 {
-                get {
-                    try {
-                        return ((string)(this[this.tableConsulta.DataColumn1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DataColumn1\' de la tabla \'Consulta\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConsulta.DataColumn1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isid_consultaNull() {
-                return this.IsNull(this.tableConsulta.id_consultaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setid_consultaNull() {
-                this[this.tableConsulta.id_consultaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isfecha_consultaNull() {
-                return this.IsNull(this.tableConsulta.fecha_consultaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setfecha_consultaNull() {
-                this[this.tableConsulta.fecha_consultaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsmotivoNull() {
-                return this.IsNull(this.tableConsulta.motivoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetmotivoNull() {
-                this[this.tableConsulta.motivoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsanamnesisNull() {
-                return this.IsNull(this.tableConsulta.anamnesisColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetanamnesisNull() {
-                this[this.tableConsulta.anamnesisColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsdiagnosticoNull() {
-                return this.IsNull(this.tableConsulta.diagnosticoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetdiagnosticoNull() {
-                this[this.tableConsulta.diagnosticoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IstratamientoNull() {
-                return this.IsNull(this.tableConsulta.tratamientoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SettratamientoNull() {
-                this[this.tableConsulta.tratamientoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Ispeso_actualNull() {
-                return this.IsNull(this.tableConsulta.peso_actualColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setpeso_actualNull() {
-                this[this.tableConsulta.peso_actualColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IstemperaturaNull() {
-                return this.IsNull(this.tableConsulta.temperaturaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SettemperaturaNull() {
-                this[this.tableConsulta.temperaturaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Ispaciente_nombreNull() {
-                return this.IsNull(this.tableConsulta.paciente_nombreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setpaciente_nombreNull() {
-                this[this.tableConsulta.paciente_nombreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsespecieNull() {
-                return this.IsNull(this.tableConsulta.especieColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetespecieNull() {
-                this[this.tableConsulta.especieColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDataColumn1Null() {
-                return this.IsNull(this.tableConsulta.DataColumn1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDataColumn1Null() {
-                this[this.tableConsulta.DataColumn1Column] = global::System.Convert.DBNull;
+            public void SetPrecioNull() {
+                this[this.tableConsulta.PrecioColumn] = global::System.Convert.DBNull;
             }
         }
         

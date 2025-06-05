@@ -70,6 +70,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.lblBuscar);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -93,6 +94,7 @@
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
+            this.lblBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblBuscar.Location = new System.Drawing.Point(728, 18);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(51, 13);
@@ -117,6 +119,7 @@
             // lblFiltrar
             // 
             this.lblFiltrar.AutoSize = true;
+            this.lblFiltrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblFiltrar.Location = new System.Drawing.Point(489, 18);
             this.lblFiltrar.Name = "lblFiltrar";
             this.lblFiltrar.Size = new System.Drawing.Size(52, 13);
@@ -127,6 +130,7 @@
             // 
             this.lbNombrePantalla.AutoSize = true;
             this.lbNombrePantalla.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombrePantalla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lbNombrePantalla.Location = new System.Drawing.Point(6, 16);
             this.lbNombrePantalla.Name = "lbNombrePantalla";
             this.lbNombrePantalla.Size = new System.Drawing.Size(134, 22);
@@ -152,6 +156,7 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
             this.groupBox2.Controls.Add(this.lblCategoria);
             this.groupBox2.Controls.Add(this.cbCategorias);
             this.groupBox2.Controls.Add(this.lblProveedor);
@@ -184,6 +189,7 @@
             this.lblCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblCategoria.Location = new System.Drawing.Point(745, 113);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(116, 22);
@@ -205,6 +211,7 @@
             this.lblProveedor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblProveedor.AutoSize = true;
             this.lblProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblProveedor.Location = new System.Drawing.Point(745, 81);
             this.lblProveedor.Name = "lblProveedor";
             this.lblProveedor.Size = new System.Drawing.Size(125, 22);
@@ -226,6 +233,7 @@
             this.lblCaducidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCaducidad.AutoSize = true;
             this.lblCaducidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblCaducidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblCaducidad.Location = new System.Drawing.Point(754, 48);
             this.lblCaducidad.Name = "lblCaducidad";
             this.lblCaducidad.Size = new System.Drawing.Size(116, 22);
@@ -257,6 +265,7 @@
             this.lblMedida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMedida.AutoSize = true;
             this.lblMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblMedida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblMedida.Location = new System.Drawing.Point(408, 110);
             this.lblMedida.Name = "lblMedida";
             this.lblMedida.Size = new System.Drawing.Size(78, 22);
@@ -284,6 +293,7 @@
             this.lblExistencia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblExistencia.AutoSize = true;
             this.lblExistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblExistencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblExistencia.Location = new System.Drawing.Point(371, 78);
             this.lblExistencia.Name = "lblExistencia";
             this.lblExistencia.Size = new System.Drawing.Size(116, 22);
@@ -311,6 +321,7 @@
             this.lbCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbCosto.AutoSize = true;
             this.lbCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lbCosto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lbCosto.Location = new System.Drawing.Point(409, 47);
             this.lbCosto.Name = "lbCosto";
             this.lbCosto.Size = new System.Drawing.Size(75, 22);
@@ -336,11 +347,11 @@
             // btEliminar
             // 
             this.btEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btEliminar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btEliminar.BackColor = System.Drawing.Color.MidnightBlue;
             this.btEliminar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btEliminar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btEliminar.Location = new System.Drawing.Point(1216, 122);
             this.btEliminar.Name = "btEliminar";
             this.btEliminar.Size = new System.Drawing.Size(116, 35);
@@ -352,10 +363,10 @@
             // btEditar
             // 
             this.btEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btEditar.BackColor = System.Drawing.Color.SteelBlue;
-            this.btEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEditar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btEditar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btEditar.Location = new System.Drawing.Point(1216, 81);
             this.btEditar.Name = "btEditar";
             this.btEditar.Size = new System.Drawing.Size(116, 35);
@@ -367,10 +378,10 @@
             // btAgregar
             // 
             this.btAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btAgregar.BackColor = System.Drawing.Color.SteelBlue;
-            this.btAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAgregar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btAgregar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btAgregar.Location = new System.Drawing.Point(1216, 40);
             this.btAgregar.Name = "btAgregar";
             this.btAgregar.Size = new System.Drawing.Size(116, 35);
@@ -384,6 +395,7 @@
             this.lblPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblPrecio.Location = new System.Drawing.Point(83, 113);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(78, 22);
@@ -405,6 +417,7 @@
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblNombre.Location = new System.Drawing.Point(72, 48);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(88, 22);
@@ -426,6 +439,7 @@
             this.lblDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblDescripcion.Location = new System.Drawing.Point(27, 81);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(133, 22);
@@ -436,6 +450,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1435, 663);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
