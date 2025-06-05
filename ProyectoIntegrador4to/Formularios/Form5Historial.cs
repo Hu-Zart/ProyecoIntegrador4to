@@ -13,24 +13,26 @@ using System.Windows.Forms;
 
 namespace ProyectoIntegrador4to
 {
-    public partial class Form5Historial: Form
+    public partial class Form5Historial : Form
     {
         public Form5Historial()
         {
             InitializeComponent();
-            cargarReporteHistoria();
             Controladores.ControladorVentas controladorVentas = new Controladores.ControladorVentas();
             controladorVentas.consultarVentas(dgvConsulta);
         }
 
         public void cargarReporteHistoria()
         {
+            int idVenta = Convert.ToInt32(dgvConsulta.SelectedRows[0].Cells[0].Value);
+            if (idVenta <= 0) return;
+            
             try
             {
                 DataSet dsReporte = new DataSet();
                 Controladores.ControladorReporte controladorHistorial = new Controladores.ControladorReporte();
 
-                controladorHistorial.reporteDetallesVenta(dsReporte, 14);
+                controladorHistorial.reporteDetallesVenta(dsReporte, idVenta);
 
                 // Modificar el ReportDataSource para usar la primera tabla
                 ReportDataSource rds = new ReportDataSource("DataSet1", dsReporte.Tables[0]);
@@ -48,6 +50,8 @@ namespace ProyectoIntegrador4to
 
         private void dgvConsulta_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Controladores.ControladorReporte controladorReporte = new Controladores.ControladorReporte();
+            cargarReporteHistoria();
         }
     }
 }

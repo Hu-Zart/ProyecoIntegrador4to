@@ -227,8 +227,8 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>0.31432cm</Top>
-        <Height>1.72917cm</Height>
-        <Width>20.71931cm</Width>
+        <Height>1.72916cm</Height>
+        <Width>20.71932cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -260,6 +260,7 @@
                   <Value>Reporte Detalles de Venta</Value>
                   <Style>
                     <FontSize>16pt</FontSize>
+                    <Color>White</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -305,7 +306,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Globals!ExecutionTime</Value>
-                  <Style />
+                  <Style>
+                    <Color>White</Color>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -331,6 +334,7 @@
         <Border>
           <Style>None</Style>
         </Border>
+        <BackgroundColor>#2a2a3a</BackgroundColor>
       </Style>
     </PageHeader>
     <PageFooter>
@@ -346,7 +350,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>=Globals!PageNumber</Value>
-                  <Style />
+                  <Style>
+                    <Color>White</Color>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -375,7 +381,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>61100, Miguel Hidalgo Sur 53, Centro, Cd Hidalgo, Mich., Mexico,</Value>
-                  <Style />
+                  <Style>
+                    <Color>White</Color>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style>
@@ -387,7 +395,9 @@
                 <TextRun>
                   <Value> 
 Tel. (786) 154 5141</Value>
-                  <Style />
+                  <Style>
+                    <Color>White</Color>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style>
@@ -415,6 +425,7 @@ Tel. (786) 154 5141</Value>
         <Border>
           <Style>None</Style>
         </Border>
+        <BackgroundColor>#2a2a3a</BackgroundColor>
       </Style>
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>
