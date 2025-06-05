@@ -15,6 +15,20 @@ namespace ProyectoIntegrador4to.Formularios
         public FormInventario()
         {
             InitializeComponent();
+            if (panel1 != null)
+            {
+
+                panel1.Controls.Clear();
+
+                Label lblMensaje = new Label();
+                lblMensaje.Text = "Seleccione una opción del menú para comenzar";
+                lblMensaje.TextAlign = ContentAlignment.MiddleCenter;
+                lblMensaje.Dock = DockStyle.Fill;
+                lblMensaje.Font = new Font("Segoe UI", 37, FontStyle.Regular);
+                lblMensaje.ForeColor = SystemColors.ControlDarkDark;
+
+                panel1.Controls.Add(lblMensaje);
+            }
         }
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)

@@ -11,17 +11,23 @@ using System.Windows.Forms;
 
 namespace ProyectoIntegrador4to
 {
+
+
     public partial class Form2: Form
     {
-        public Form2()
+
+        public Modelos.ModeloUsuarios UsuarioActual { get; private set; }
+
+
+        public Form2(Modelos.ModeloUsuarios usuarioActual)
         {
             InitializeComponent();
-            
+            UsuarioActual = usuarioActual;
         }
 
         private void btDirigirReg_Click(object sender, EventArgs e)
         {
-            Form formRegistro = new FormRegistro();
+            Form formRegistro = new FormRegistro(UsuarioActual);
             mOSTRARfORMULARIOeNpANEL(formRegistro);
         }
 
@@ -64,7 +70,7 @@ namespace ProyectoIntegrador4to
             lblMensaje.Text = "Seleccione una opción del menú para comenzar";
             lblMensaje.TextAlign = ContentAlignment.MiddleCenter;
             lblMensaje.Dock = DockStyle.Fill;
-            lblMensaje.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            lblMensaje.Font = new Font("Segoe UI", 37, FontStyle.Regular);
             lblMensaje.ForeColor = SystemColors.ControlDarkDark;
 
             panel2.Controls.Add(lblMensaje);
@@ -74,6 +80,12 @@ namespace ProyectoIntegrador4to
         {
             Form formUsuarios = new FormUsuarios();
             mOSTRARfORMULARIOeNpANEL(formUsuarios);
+        }
+
+        private void btDirigriVentas_Click(object sender, EventArgs e)
+        {
+            Form formVentas = new FormVentas(UsuarioActual);
+            mOSTRARfORMULARIOeNpANEL(formVentas);
         }
     }
 }

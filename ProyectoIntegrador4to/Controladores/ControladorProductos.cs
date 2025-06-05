@@ -81,71 +81,7 @@ namespace ProyectoIntegrador4to.Controladores
                 MessageBox.Show("Error al consultar los productos: " + ex.Message);
             }
         }
-        public void consultarProductosss(DataGridView dgProductos)
-        {
-            Conexion.Conexion conexion = new Conexion.Conexion();
-            Modelos.ModeloProductos objetoProductos = new Modelos.ModeloProductos();
-            DataTable dtProductos = new DataTable();
-
-            dtProductos.Columns.Add("ID", typeof(int));
-            dtProductos.Columns.Add("Nombre", typeof(string));
-            dtProductos.Columns.Add("Descipción", typeof(string));
-            dtProductos.Columns.Add("Precio", typeof(float));
-            dtProductos.Columns.Add("Costo", typeof(float));
-            dtProductos.Columns.Add("Existencia", typeof(int));
-            dtProductos.Columns.Add("Medida", typeof(string));
-            dtProductos.Columns.Add("Caducidad", typeof(DateTime));
-            dtProductos.Columns.Add("Proveedor", typeof(string));
-            dtProductos.Columns.Add("Categoria", typeof(string));
-
-            string sql = @"SELECT p.id_producto, p.nombre, p.descripcion, p.precio, p.costo, p.existencia, p.unidad_medida, p.fecha_caducidad, pr.nombre AS nombre_proveedor, c.nombre AS nombre_categoria
-                         FROM productos p 
-                         INNER JOIN proveedores pr ON p.id_proveedor = pr.id_proveedor 
-                         INNER JOIN categorias c ON p.id_categoria = c.id_categoria";
-
-            try
-            {
-                MySqlConnection sqlConnection = conexion.establecerConexion();
-                MySqlCommand sqlCommand = new MySqlCommand(sql, sqlConnection);
-                MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(sqlCommand);
-
-                DataSet dt = new DataSet();
-                sqlDataAdapter.Fill(dt);
-
-                DataTable dtDatos = dt.Tables[0];
-
-                foreach (DataRow row in dtDatos.Rows)
-                {
-                    objetoProductos.IdProducto = Convert.ToInt32(row["id_producto"]);
-                    objetoProductos.Nombre = row["nombre"].ToString();
-                    objetoProductos.Descripcion = row["descripcion"] != DBNull.Value ? row["descripcion"].ToString() : "";
-                    objetoProductos.Precio = Convert.ToSingle(row["precio"]);
-                    objetoProductos.Costo = Convert.ToSingle(row["costo"]);
-                    objetoProductos.Existencia = Convert.ToInt32(row["existencia"]);
-                    objetoProductos.Unidad_medida = row["unidad_medida"] != DBNull.Value ? row["unidad_medida"].ToString() : "";
-                    objetoProductos.Fecha_caducidad = row["fecha_caducidad"] != DBNull.Value ? Convert.ToDateTime(row["fecha_caducidad"]) : DateTime.MinValue;
-                    objetoProductos.Proveedor = row["nombre_proveedor"].ToString();
-                    objetoProductos.Categoria = row["nombre_categoria"].ToString();
-                    dtProductos.Rows.Add(objetoProductos.IdProducto, objetoProductos.Nombre, objetoProductos.Descripcion,
-                        objetoProductos.Precio, objetoProductos.Costo, objetoProductos.Existencia,
-                        objetoProductos.Unidad_medida, objetoProductos.Fecha_caducidad, objetoProductos.Proveedor,
-                        objetoProductos.Categoria);
-                }
-
-                dgProductos.DataSource = dtProductos; //asignasr los productos al datagridview
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al consultar los productos: " + ex.Message);
-            }
-            finally
-            {
-                if (conexion != null)
-                {
-                    conexion.cerrarConexion();
-                }
-            }
-        }
+        
 
         public void productosPorId(int idProducto, ModeloProductos modeloProductos)
         {
@@ -220,44 +156,6 @@ namespace ProyectoIntegrador4to.Controladores
                 
                 conexion.cerrarConexion();
             }
-        }
-        public void consultaProveedoress(ComboBox cbProveedores)
-        {
-            Conexion.Conexion conexion = new Conexion.Conexion();
-            Modelos.ModeloProductos objetoProveedores = new Modelos.ModeloProductos();
-            DataTable dtModelo = new DataTable();
-
-            dtModelo.Columns.Add("ID", typeof(int));
-            dtModelo.Columns.Add("Nombre", typeof(string));
-
-            string sql = "SELECT id_proveedor, nombre FROM proveedores";
-            DataTable dt = dtModelo;
-            try
-            {
-                MySqlConnection sqlConexion = conexion.establecerConexion();
-                MySqlCommand cmd = new MySqlCommand(sql, sqlConexion);
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                adaptador.Fill(ds);
-                DataTable dtDatos = ds.Tables[0];
-                foreach (DataRow row in dtDatos.Rows)
-                {
-                    objetoProveedores.IdProducto = Convert.ToInt32(row["id_proveedor"]);
-                    objetoProveedores.Nombre = row["nombre"].ToString();
-                    dtModelo.Rows.Add(objetoProveedores.IdProducto, objetoProveedores.Nombre);
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error al consultar los proveedores: " + e.Message);
-            }
-            finally
-            {
-                conexion.cerrarConexion();
-            }
-            cbProveedores.DataSource = dtModelo;
-            cbProveedores.ValueMember = "ID";
-            cbProveedores.DisplayMember = "Nombre";
         }
 
         public void consultaCategorias(ComboBox cbCategorias)

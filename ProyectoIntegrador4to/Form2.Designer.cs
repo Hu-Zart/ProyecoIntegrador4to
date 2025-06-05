@@ -32,8 +32,9 @@
             this.btDirigirInv = new System.Windows.Forms.Button();
             this.btRedirigirHis = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btDirigriVentas = new System.Windows.Forms.Button();
             this.btRedirigirUsuarios = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             // 
             // btDirigirInv
             // 
-            this.btDirigirInv.Location = new System.Drawing.Point(13, 249);
+            this.btDirigirInv.Location = new System.Drawing.Point(13, 188);
             this.btDirigirInv.Name = "btDirigirInv";
             this.btDirigirInv.Size = new System.Drawing.Size(127, 46);
             this.btDirigirInv.TabIndex = 1;
@@ -59,7 +60,7 @@
             // 
             // btRedirigirHis
             // 
-            this.btRedirigirHis.Location = new System.Drawing.Point(13, 505);
+            this.btRedirigirHis.Location = new System.Drawing.Point(13, 536);
             this.btRedirigirHis.Name = "btRedirigirHis";
             this.btRedirigirHis.Size = new System.Drawing.Size(127, 46);
             this.btRedirigirHis.TabIndex = 2;
@@ -71,7 +72,8 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
+            this.panel1.Controls.Add(this.btDirigriVentas);
             this.panel1.Controls.Add(this.btRedirigirUsuarios);
             this.panel1.Controls.Add(this.btDirigirReg);
             this.panel1.Controls.Add(this.btRedirigirHis);
@@ -81,20 +83,19 @@
             this.panel1.Size = new System.Drawing.Size(163, 794);
             this.panel1.TabIndex = 3;
             // 
-            // panel2
+            // btDirigriVentas
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(181, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1314, 794);
-            this.panel2.TabIndex = 4;
+            this.btDirigriVentas.Location = new System.Drawing.Point(13, 362);
+            this.btDirigriVentas.Name = "btDirigriVentas";
+            this.btDirigriVentas.Size = new System.Drawing.Size(127, 46);
+            this.btDirigriVentas.TabIndex = 4;
+            this.btDirigriVentas.Text = "VENTA";
+            this.btDirigriVentas.UseVisualStyleBackColor = true;
+            this.btDirigriVentas.Click += new System.EventHandler(this.btDirigriVentas_Click);
             // 
             // btRedirigirUsuarios
             // 
-            this.btRedirigirUsuarios.Location = new System.Drawing.Point(13, 711);
+            this.btRedirigirUsuarios.Location = new System.Drawing.Point(13, 710);
             this.btRedirigirUsuarios.Name = "btRedirigirUsuarios";
             this.btRedirigirUsuarios.Size = new System.Drawing.Size(127, 46);
             this.btRedirigirUsuarios.TabIndex = 3;
@@ -102,10 +103,22 @@
             this.btRedirigirUsuarios.UseVisualStyleBackColor = true;
             this.btRedirigirUsuarios.Click += new System.EventHandler(this.btRedirigirUsuarios_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
+            this.panel2.Location = new System.Drawing.Point(181, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1314, 794);
+            this.panel2.TabIndex = 4;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1507, 818);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -126,5 +139,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btRedirigirUsuarios;
+        private System.Windows.Forms.Button btDirigriVentas;
     }
 }

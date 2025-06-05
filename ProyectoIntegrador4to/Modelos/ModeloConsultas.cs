@@ -16,7 +16,6 @@ namespace ProyectoIntegrador4to.Modelos
         string anamnesis;
         string diagnostico;
         string tratamiento;
-        string observaciones;
         float pesoActual;
         float temperatura;
         string frecuenciaCardiaca;
@@ -31,7 +30,6 @@ namespace ProyectoIntegrador4to.Modelos
         public string Anamnesis { get => anamnesis; set => anamnesis = value; }
         public string Diagnostico { get => diagnostico; set => diagnostico = value; }
         public string Tratamiento { get => tratamiento; set => tratamiento = value; }
-        public string Observaciones { get => observaciones; set => observaciones = value; }
         public float PesoActual { get => pesoActual; set => pesoActual = value; }
         public float Temperatura { get => temperatura; set => temperatura = value; }
         public string FrecuenciaCardiaca { get => frecuenciaCardiaca; set => frecuenciaCardiaca = value; }

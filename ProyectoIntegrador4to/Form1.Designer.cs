@@ -51,7 +51,7 @@
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(287, 31);
             this.tbUsuario.TabIndex = 1;
-            this.tbUsuario.Text = "USUARIO";
+            this.tbUsuario.Text = "Ana Garcia";
             // 
             // tbContraseña
             // 
@@ -60,7 +60,7 @@
             this.tbContraseña.Name = "tbContraseña";
             this.tbContraseña.Size = new System.Drawing.Size(287, 27);
             this.tbContraseña.TabIndex = 3;
-            this.tbContraseña.Text = "CONTRASEÑA";
+            this.tbContraseña.Text = "Apass1234";
             // 
             // lbContraseña
             // 
