@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lbUsuario = new System.Windows.Forms.Label();
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.tbContraseña = new System.Windows.Forms.TextBox();
@@ -38,6 +39,7 @@
             // lbUsuario
             // 
             this.lbUsuario.AutoSize = true;
+            this.lbUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbUsuario.Location = new System.Drawing.Point(34, 9);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(43, 13);
@@ -46,6 +48,7 @@
             // 
             // tbUsuario
             // 
+            this.tbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.tbUsuario.Location = new System.Drawing.Point(12, 25);
             this.tbUsuario.Name = "tbUsuario";
@@ -55,6 +58,7 @@
             // 
             // tbContraseña
             // 
+            this.tbContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
             this.tbContraseña.Location = new System.Drawing.Point(12, 105);
             this.tbContraseña.Name = "tbContraseña";
@@ -65,6 +69,7 @@
             // lbContraseña
             // 
             this.lbContraseña.AutoSize = true;
+            this.lbContraseña.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbContraseña.Location = new System.Drawing.Point(34, 89);
             this.lbContraseña.Name = "lbContraseña";
             this.lbContraseña.Size = new System.Drawing.Size(61, 13);
@@ -85,14 +90,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(311, 207);
             this.Controls.Add(this.btIngresar);
             this.Controls.Add(this.tbContraseña);
             this.Controls.Add(this.lbContraseña);
             this.Controls.Add(this.tbUsuario);
             this.Controls.Add(this.lbUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "INICIO";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

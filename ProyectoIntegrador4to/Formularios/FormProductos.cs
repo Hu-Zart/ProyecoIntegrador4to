@@ -39,7 +39,7 @@ namespace ProyectoIntegrador4to
             objetoProducto.Existencia = (int)numExistencia.Value;
             objetoProducto.Unidad_medida = tbMedida.Text;
             objetoProducto.Fecha_caducidad = dtpCaducidad.Value;
-            objetoProducto.Proveedor = cbProveedores.SelectedValue.ToString();
+            objetoProducto.Proveedor = "3";
             objetoProducto.Categoria = cbCategorias.SelectedValue.ToString();
         }
 
@@ -132,7 +132,7 @@ namespace ProyectoIntegrador4to
                 objetoProducto.Existencia = (int)numExistencia.Value;
                 objetoProducto.Unidad_medida = tbMedida.Text;
                 objetoProducto.Fecha_caducidad = dtpCaducidad.Value;
-                objetoProducto.Proveedor = cbProveedores.SelectedValue.ToString();
+                objetoProducto.Proveedor = "3";
                 objetoProducto.Categoria = cbCategorias.SelectedValue.ToString();
 
                 Controladores.ControladorProductos controladorProducto = new Controladores.ControladorProductos();

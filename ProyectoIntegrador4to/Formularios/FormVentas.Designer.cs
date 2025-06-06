@@ -67,6 +67,7 @@
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnElimnarSeleccionProducto = new System.Windows.Forms.Button();
             this.dtgResumenVenta = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
@@ -75,7 +76,6 @@
             this.lblTotalPagar = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.btnCompletarVenta = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgbClientes)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -95,7 +95,7 @@
             this.groupBox1.Controls.Add(this.dgbClientes);
             this.groupBox1.Controls.Add(this.txtBuscarCliente);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(774, 189);
@@ -117,6 +117,7 @@
             // 
             this.dgbClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgbClientes.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgbClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgbClientes.Location = new System.Drawing.Point(6, 39);
             this.dgbClientes.Name = "dgbClientes";
@@ -151,7 +152,7 @@
             this.groupBox2.Controls.Add(this.dtgProductos);
             this.groupBox2.Controls.Add(this.txtBuscarProductos);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox2.Location = new System.Drawing.Point(288, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(789, 189);
@@ -173,6 +174,7 @@
             // 
             this.dtgProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgProductos.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgProductos.Location = new System.Drawing.Point(9, 39);
             this.dtgProductos.Name = "dtgProductos";
@@ -237,6 +239,7 @@
             // 
             this.btnAgregarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarProducto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAgregarProducto.Location = new System.Drawing.Point(9, 63);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(1032, 77);
@@ -548,12 +551,27 @@
             this.groupBox7.Controls.Add(this.btnElimnarSeleccionProducto);
             this.groupBox7.Controls.Add(this.dtgResumenVenta);
             this.groupBox7.Controls.Add(this.label13);
+            this.groupBox7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox7.Location = new System.Drawing.Point(16, 511);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(1060, 321);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Resumen de Venta";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(2, 252);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(1058, 63);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "COMPLETAR VENTA";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnElimnarSeleccionProducto
             // 
@@ -577,6 +595,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgResumenVenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgResumenVenta.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dtgResumenVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgResumenVenta.Location = new System.Drawing.Point(7, 40);
             this.dtgResumenVenta.Name = "dtgResumenVenta";
@@ -650,23 +669,11 @@
             this.btnCompletarVenta.UseVisualStyleBackColor = true;
             this.btnCompletarVenta.Click += new System.EventHandler(this.btnCompletarVenta_Click);
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button1.Location = new System.Drawing.Point(2, 252);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(1058, 63);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "COMPLETAR VENTA";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FormVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1084, 857);
             this.Controls.Add(this.btnCompletarVenta);
             this.Controls.Add(this.lblTotalPagar);

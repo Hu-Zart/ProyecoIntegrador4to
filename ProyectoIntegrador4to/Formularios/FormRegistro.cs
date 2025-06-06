@@ -23,7 +23,7 @@ namespace ProyectoIntegrador4to.Formularios
             panel1.Controls.Clear();
 
             Label lblMensaje = new Label();
-            lblMensaje.Text = "Seleccione una opción del menú para comenzar";
+            lblMensaje.Text = "Seleccione una opción del menú";
             lblMensaje.TextAlign = ContentAlignment.MiddleCenter;
             lblMensaje.Dock = DockStyle.Fill;
             lblMensaje.Font = new Font("Segoe UI", 37, FontStyle.Regular);

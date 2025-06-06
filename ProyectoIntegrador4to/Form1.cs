@@ -18,6 +18,7 @@ namespace ProyectoIntegrador4to
         public Form1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btIngresar_Click(object sender, EventArgs e)

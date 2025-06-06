@@ -241,6 +241,7 @@
       <Border>
         <Style>None</Style>
       </Border>
+      <BackgroundColor>White</BackgroundColor>
     </Style>
   </Body>
   <Width>8.15721in</Width>
@@ -334,6 +335,9 @@
         <Border>
           <Style>None</Style>
         </Border>
+        <BottomBorder>
+          <Style>Solid</Style>
+        </BottomBorder>
         <BackgroundColor>#2a2a3a</BackgroundColor>
       </Style>
     </PageHeader>

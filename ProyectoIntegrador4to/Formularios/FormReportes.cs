@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoIntegrador4to.Formularios
 {
-    public partial class FormInventario: Form
+    public partial class FormReportes: Form
     {
-        public FormInventario()
+        public FormReportes()
         {
             InitializeComponent();
             if (panel1 != null)
@@ -31,20 +31,11 @@ namespace ProyectoIntegrador4to.Formularios
             }
         }
 
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void reporteVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mostrarFormulario(new FormProductos());
+            mostrarFormulario(new Form5Historial());
         }
 
-        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            mostrarFormulario(new FormCategorias());
-        }
-
-        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            mostrarFormulario(new FormProveedores());
-        }
         public void mostrarFormulario(Form formulario)
         {
 
@@ -58,6 +49,9 @@ namespace ProyectoIntegrador4to.Formularios
             formulario.Show();
         }
 
-        
+        private void reporteHistoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mostrarFormulario(new FormReporteHistoria());
+        }
     }
 }

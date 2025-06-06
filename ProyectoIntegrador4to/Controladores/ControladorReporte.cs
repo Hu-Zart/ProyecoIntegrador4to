@@ -39,5 +39,53 @@ namespace ProyectoIntegrador4to.Controladores
             }
         }
 
+        public void reporteHojaHistoria(DataSet dsReporte, int idConsulta)
+        {
+            Conexion.Conexion conexion = new Conexion.Conexion();
+            string sql = @"SELECT 
+    u.nombre AS UNombre,
+    u.telefono AS UTelefono,
+    c.fecha_consulta AS FechaConsulta,
+    t.nombre AS TNombre,
+    t.direccion AS TDireccion,
+    t.telefono AS TTelefono,
+    p.nombre AS PNombre,
+    e.nombre AS PEspecie,  
+    p.raza AS PRaza,
+    p.fecha_nacimiento AS PFechaNacimiento,
+    c.temperatura AS Temperatura,
+    c.frecuencia_cardiaca AS LPM,
+    c.frecuencia_respiratoria AS RPM,
+    c.motivo AS Motivo,
+    c.anamnesis AS Anamnesis,
+    c.diagnostico AS Diagnostico,
+    c.tratamiento AS Tratamiento
+FROM consultas c
+INNER JOIN usuarios u ON c.id_usuario = u.id_usuario
+INNER JOIN pacientes p ON c.id_paciente = p.id_paciente
+INNER JOIN tutores t ON p.id_tutor = t.id_tutor
+INNER JOIN especies e ON p.id_especie = e.id_especie  
+WHERE c.id_consulta = @idConsulta";
+
+            try
+            {
+                MySqlConnection sqlConexion = conexion.establecerConexion();
+                MySqlCommand comando = new MySqlCommand(sql, sqlConexion);
+                comando.Parameters.AddWithValue("@idConsulta", idConsulta);
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+
+                // Llenar la tabla específica del XSD
+                adaptador.Fill(dsReporte, "HojaHistoria");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al generar hoja de historia: " + e.Message);
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+            }
+        }
+
     }
 }

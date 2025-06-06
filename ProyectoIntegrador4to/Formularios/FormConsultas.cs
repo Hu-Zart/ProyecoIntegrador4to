@@ -216,5 +216,10 @@ namespace ProyectoIntegrador4to.Formularios
                 conexion.cerrarConexion();
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

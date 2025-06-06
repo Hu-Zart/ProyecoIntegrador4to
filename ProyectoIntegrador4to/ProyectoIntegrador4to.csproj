@@ -192,6 +192,18 @@
     <Compile Include="Formularios\FormRegistro.Designer.cs">
       <DependentUpon>FormRegistro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FormReporteHistoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormReporteHistoria.Designer.cs">
+      <DependentUpon>FormReporteHistoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormReportes.Designer.cs">
+      <DependentUpon>FormReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FormTutores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +276,12 @@
     <EmbeddedResource Include="Formularios\FormRegistro.resx">
       <DependentUpon>FormRegistro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormReporteHistoria.resx">
+      <DependentUpon>FormReporteHistoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormReportes.resx">
+      <DependentUpon>FormReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormTutores.resx">
       <DependentUpon>FormTutores.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,6 +303,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\ReporteHistorialClinico.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteVenta.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

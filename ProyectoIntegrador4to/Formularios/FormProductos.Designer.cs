@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblBuscar = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lblFiltrar = new System.Windows.Forms.Label();
             this.lbNombrePantalla = new System.Windows.Forms.Label();
             this.dgProductos = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -71,10 +67,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.lblBuscar);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.lblFiltrar);
             this.groupBox1.Controls.Add(this.lbNombrePantalla);
             this.groupBox1.Controls.Add(this.dgProductos);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -83,48 +75,6 @@
             this.groupBox1.Size = new System.Drawing.Size(1411, 430);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(785, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 20);
-            this.textBox1.TabIndex = 5;
-            // 
-            // lblBuscar
-            // 
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblBuscar.Location = new System.Drawing.Point(728, 18);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(51, 13);
-            this.lblBuscar.TabIndex = 4;
-            this.lblBuscar.Text = "BUSCAR";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Alimentos",
-            "Medicamentos",
-            "Suplementos",
-            "Accesorios",
-            "Higiene/Cuidado",
-            "Equipos/Suministros"});
-            this.comboBox1.Location = new System.Drawing.Point(538, 15);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // lblFiltrar
-            // 
-            this.lblFiltrar.AutoSize = true;
-            this.lblFiltrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblFiltrar.Location = new System.Drawing.Point(489, 18);
-            this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(52, 13);
-            this.lblFiltrar.TabIndex = 2;
-            this.lblFiltrar.Text = "FILTRAR";
             // 
             // lbNombrePantalla
             // 
@@ -347,11 +297,11 @@
             // btEliminar
             // 
             this.btEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btEliminar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btEliminar.BackColor = System.Drawing.Color.White;
             this.btEliminar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btEliminar.Location = new System.Drawing.Point(1216, 122);
             this.btEliminar.Name = "btEliminar";
             this.btEliminar.Size = new System.Drawing.Size(116, 35);
@@ -363,10 +313,10 @@
             // btEditar
             // 
             this.btEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btEditar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btEditar.BackColor = System.Drawing.Color.White;
             this.btEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btEditar.Location = new System.Drawing.Point(1216, 81);
             this.btEditar.Name = "btEditar";
             this.btEditar.Size = new System.Drawing.Size(116, 35);
@@ -378,10 +328,10 @@
             // btAgregar
             // 
             this.btAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btAgregar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btAgregar.BackColor = System.Drawing.Color.White;
             this.btAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btAgregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btAgregar.Location = new System.Drawing.Point(1216, 40);
             this.btAgregar.Name = "btAgregar";
             this.btAgregar.Size = new System.Drawing.Size(116, 35);
@@ -484,10 +434,6 @@
         private System.Windows.Forms.Button btAgregar;
         private System.Windows.Forms.Button btEliminar;
         private System.Windows.Forms.Button btEditar;
-        private System.Windows.Forms.Label lblFiltrar;
-        private System.Windows.Forms.Label lblBuscar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.NumericUpDown numCosto;
         private System.Windows.Forms.Label lbCosto;
         public System.Windows.Forms.NumericUpDown numPrecio;

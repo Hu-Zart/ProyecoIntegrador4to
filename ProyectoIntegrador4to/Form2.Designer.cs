@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.btDirigirReg = new System.Windows.Forms.Button();
             this.btDirigirInv = new System.Windows.Forms.Button();
             this.btRedirigirHis = new System.Windows.Forms.Button();
@@ -64,7 +65,7 @@
             this.btRedirigirHis.Name = "btRedirigirHis";
             this.btRedirigirHis.Size = new System.Drawing.Size(127, 46);
             this.btRedirigirHis.TabIndex = 2;
-            this.btRedirigirHis.Text = "HISTORIAL";
+            this.btRedirigirHis.Text = "REPORTES";
             this.btRedirigirHis.UseVisualStyleBackColor = true;
             this.btRedirigirHis.Click += new System.EventHandler(this.btRedirigirHis_Click);
             // 
@@ -122,8 +123,8 @@
             this.ClientSize = new System.Drawing.Size(1507, 818);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
-            this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);

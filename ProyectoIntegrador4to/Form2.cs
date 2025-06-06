@@ -39,8 +39,9 @@ namespace ProyectoIntegrador4to
 
         private void btRedirigirHis_Click(object sender, EventArgs e)
         {
-            Form form5Historial = new Form5Historial();
-            mOSTRARfORMULARIOeNpANEL(form5Historial);
+            Form formReportes = new FormReportes();
+            mOSTRARfORMULARIOeNpANEL(formReportes);
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
